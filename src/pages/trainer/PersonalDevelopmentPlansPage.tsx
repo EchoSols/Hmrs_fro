@@ -88,7 +88,7 @@ const mockPersonalPlans: PersonalDevelopmentPlan[] = [
         id: '3',
         title: 'Obtain AWS Certification',
         description: 'Complete AWS Solutions Architect certification',
-        category: 'Certification',
+        category: 'Skill Development',
         targetDate: '2024-08-31',
         status: 'In Progress',
         progress: 40
