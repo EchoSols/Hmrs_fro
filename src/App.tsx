@@ -64,7 +64,7 @@ import TrainerSettingsPage from "@/pages/trainer/TrainerSettingsPage";
 
 // Employee Pages
 import ProfilePage from "@/pages/employee/ProfilePage";
-import TimeTrackingPage from "@/pages/employee/TimeTracking;
+import TimeTrackingPage from "@/pages/employee/TimeTrackingPage";
 import AttendancePage from "@/pages/employee/AttendancePage";
 import OvertimePage from "@/pages/employee/OvertimePage";
 import LeaveRequestPage from "@/pages/employee/LeaveRequestPage";
