@@ -380,7 +380,7 @@ const TaxReportsPage = () => {
                       }`}>
                         {new Date(report.dueDate) < new Date() && report.status !== 'completed' 
                           ? 'Overdue' 
-                          : `${Math.ceil((new Date(report.dueDate) - new Date()) / (1000 * 60 * 60 * 24))} days remaining`
+                          : `${Math.ceil((new Date(report.dueDate).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))} days remaining`
                         }
                       </div>
                     </td>

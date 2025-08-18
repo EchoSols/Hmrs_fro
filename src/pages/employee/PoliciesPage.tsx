@@ -327,7 +327,7 @@ const PoliciesPage = () => {
                   <div className="flex items-center gap-2 mb-2">
                     <h3 className="text-lg font-semibold text-gray-900">{policy.title}</h3>
                     {policy.mandatory && (
-                      <Star className="w-4 h-4 text-red-500" title="Mandatory Policy" />
+                      <Star className="w-4 h-4 text-red-500" />
                     )}
                   </div>
                   <p className="text-sm text-gray-600 mb-2">{policy.description}</p>
@@ -421,7 +421,7 @@ const PoliciesPage = () => {
                     <div className="flex items-center gap-2 mb-2">
                       <h2 className="text-xl font-semibold text-gray-900">{selectedPolicy.title}</h2>
                       {selectedPolicy.mandatory && (
-                        <Star className="w-5 h-5 text-red-500" title="Mandatory Policy" />
+                        <Star className="w-5 h-5 text-red-500" />
                       )}
                     </div>
                     <p className="text-gray-600">{selectedPolicy.description}</p>

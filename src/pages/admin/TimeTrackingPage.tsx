@@ -472,7 +472,7 @@ const AdminTimeTrackingPage = () => {
                           <>
                             <div className="text-gray-900">{entry.breakStart} - {entry.breakEnd}</div>
                             <div className="text-gray-500">
-                              {((new Date(`2024-01-01T${entry.breakEnd}`) - new Date(`2024-01-01T${entry.breakStart}`)) / (1000 * 60)).toFixed(0)} min
+                              {((new Date(`2024-01-01T${entry.breakEnd}`).getTime() - new Date(`2024-01-01T${entry.breakStart}`).getTime()) / (1000 * 60)).toFixed(0)} min
                             </div>
                           </>
                         ) : (
