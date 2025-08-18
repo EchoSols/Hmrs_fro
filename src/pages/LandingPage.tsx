@@ -382,7 +382,7 @@ const PricingSection = () => {
               </a>
             </div>
             <ul className="space-y-3">
-              {t('landing.basicPlan.features', { returnObjects: true }).map((feature: string, index: number) => (
+              {(t('landing.basicPlan.features', { returnObjects: true }) as string[]).map((feature: string, index: number) => (
                 <li key={index} className="flex items-center text-sm text-gray-300">
                   <Check className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
                   {feature}
@@ -418,7 +418,7 @@ const PricingSection = () => {
               </a>
             </div>
             <ul className="space-y-3">
-              {t('landing.professionalPlan.features', { returnObjects: true }).map((feature: string, index: number) => (
+              {(t('landing.professionalPlan.features', { returnObjects: true }) as string[]).map((feature: string, index: number) => (
                 <li key={index} className="flex items-center text-sm text-gray-300">
                   <Check className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
                   {feature}
@@ -449,7 +449,7 @@ const PricingSection = () => {
               </a>
             </div>
             <ul className="space-y-3">
-              {t('landing.enterprisePlan.features', { returnObjects: true }).map((feature: string, index: number) => (
+              {(t('landing.enterprisePlan.features', { returnObjects: true }) as string[]).map((feature: string, index: number) => (
                 <li key={index} className="flex items-center text-sm text-gray-300">
                   <Check className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
                   {feature}
