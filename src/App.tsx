@@ -7,6 +7,7 @@ import LandingPage from "@/pages/LandingPage";
 import LoginPage from "@/pages/LoginPage";
 import TeamMembersPage from "@/pages/TeamMembersPage";
 import MainDashboardPage from "@/pages/DashboardPage";
+import ProtectedRoute from "@/components/auth/ProtectedRoute";
 import "@/i18n";
 
 // Layouts
@@ -299,14 +300,22 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<LoginPage />} />
           
-                     {/* Main App Routes */}
-           <Route path="/app" element={<MainLayout />}>
-             <Route index element={<MainDashboardPage />} />
-             <Route path="team-members" element={<TeamMembersPage />} />
-           </Route>
+                               {/* Main App Routes */}
+          <Route path="/app" element={
+            <ProtectedRoute>
+              <MainLayout />
+            </ProtectedRoute>
+          }>
+            <Route index element={<MainDashboardPage />} />
+            <Route path="team-members" element={<TeamMembersPage />} />
+          </Route>
 
           {/* Admin Routes */}
-          <Route path="/admin" element={<AdminLayout />}>
+          <Route path="/admin" element={
+            <ProtectedRoute requiredRole="admin">
+              <AdminLayout />
+            </ProtectedRoute>
+          }>
             <Route index element={<DashboardPage />} />
             <Route path="employees" element={<EmployeesPage />} />
             <Route path="departments" element={<DepartmentsPage />} />
@@ -346,7 +355,11 @@ function App() {
           </Route>
 
           {/* Employee Routes */}
-          <Route path="/employee" element={<EmployeeLayout />}>
+          <Route path="/employee" element={
+            <ProtectedRoute requiredRole="employee">
+              <EmployeeLayout />
+            </ProtectedRoute>
+          }>
             <Route index element={<EmployeeDashboard />} />
             <Route path="profile" element={<ProfilePage />} />
             <Route path="time-tracking" element={<TimeTrackingPage />} />
@@ -382,7 +395,11 @@ function App() {
           </Route>
 
           {/* Manager Routes */}
-          <Route path="/manager" element={<ManagerLayout />}>
+          <Route path="/manager" element={
+            <ProtectedRoute requiredRole="manager">
+              <ManagerLayout />
+            </ProtectedRoute>
+          }>
             <Route index element={<ManagerDashboard />} />
             <Route path="team" element={<TeamOverviewPage />} />
             <Route path="team-directory" element={<TeamDirectoryPage />} />
@@ -425,7 +442,11 @@ function App() {
           </Route>
 
           {/* HR Routes */}
-          <Route path="/hr" element={<HRLayout />}>
+          <Route path="/hr" element={
+            <ProtectedRoute requiredRole="hr">
+              <HRLayout />
+            </ProtectedRoute>
+          }>
             <Route index element={<HRDashboard />} />
             <Route path="employees" element={<HREmployeesPage />} />
             <Route path="onboarding" element={<OnboardingPage />} />
@@ -512,7 +533,11 @@ function App() {
           </Route>
 
           {/* Auditor Routes */}
-          <Route path="/auditor" element={<AuditorLayout />}>
+          <Route path="/auditor" element={
+            <ProtectedRoute requiredRole="auditor">
+              <AuditorLayout />
+            </ProtectedRoute>
+          }>
             <Route index element={<AuditorDashboard />} />
             <Route path="compliance" element={<CompliancePage />} />
             <Route path="policy-adherence" element={<PolicyAdherencePage />} />
@@ -596,7 +621,11 @@ function App() {
           </Route>
 
           {/* Trainer Routes */}
-          <Route path="/trainer" element={<TrainerLayout />}>
+          <Route path="/trainer" element={
+            <ProtectedRoute requiredRole="trainer">
+              <TrainerLayout />
+            </ProtectedRoute>
+          }>
             <Route index element={<TrainerDashboard />} />
             <Route path="programs" element={<ProgramsPage />} />
             <Route path="create-program" element={<CreateProgramPage />} />
