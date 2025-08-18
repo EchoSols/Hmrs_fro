@@ -1,10 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { LoadingProvider } from "@/contexts/LoadingContext";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 import LoadingOverlay from "@/components/LoadingOverlay";
 import MainLayout from "@/components/layouts/MainLayout";
 import LandingPage from "@/pages/LandingPage";
 import LoginPage from "@/pages/LoginPage";
 import TeamMembersPage from "@/pages/TeamMembersPage";
+import MainDashboardPage from "@/pages/DashboardPage";
+import "@/i18n";
 
 // Layouts
 import AdminLayout from "@/layouts/AdminLayout";
@@ -284,19 +287,21 @@ import TrainerMessagesPage from "@/pages/trainer/MessagesPage";
 
 function App() {
   return (
-    <LoadingProvider>
-      <Router>
-        <div className="App">
-          <LoadingOverlay />
+    <ThemeProvider>
+      <LoadingProvider>
+        <Router>
+          <div className="App">
+            <LoadingOverlay />
                   <Routes>
           {/* Public Routes */}
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<LoginPage />} />
           
-          {/* Main App Routes */}
-          <Route path="/app" element={<MainLayout />}>
-            <Route path="team-members" element={<TeamMembersPage />} />
-          </Route>
+                     {/* Main App Routes */}
+           <Route path="/app" element={<MainLayout />}>
+             <Route index element={<MainDashboardPage />} />
+             <Route path="team-members" element={<TeamMembersPage />} />
+           </Route>
 
           {/* Admin Routes */}
           <Route path="/admin" element={<AdminLayout />}>
@@ -707,6 +712,7 @@ function App() {
       </div>
     </Router>
     </LoadingProvider>
+    </ThemeProvider>
   );
 }
 

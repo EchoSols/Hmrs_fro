@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { 
   CheckSquare, 
   Zap, 
@@ -27,48 +28,49 @@ interface NavigationItem {
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation()
+  const { t } = useTranslation()
   const [expandedMenus, setExpandedMenus] = useState<string[]>([])
 
   const navigation: NavigationItem[] = [
     {
-      name: 'My Tasks',
+      name: t('navigation.dashboard'),
+      href: '/app',
+      icon: Home
+    },
+    {
+      name: t('navigation.myTasks'),
       href: '/tasks',
       icon: CheckSquare,
       badge: 4
     },
     {
-      name: 'Activities',
+      name: t('navigation.activities'),
       href: '/activities',
       icon: Zap,
       badge: 14
     },
     {
-      name: 'Overview',
-      href: '/overview',
-      icon: Home
-    },
-    {
-      name: 'Messages',
+      name: t('navigation.messages'),
       href: '/messages',
       icon: MessageSquare,
       badge: 4
     },
     {
-      name: 'Team Members',
-      href: '/team-members',
+      name: t('navigation.teamMembers'),
+      href: '/app/team-members',
       icon: Users
     },
     {
-      name: 'Calendar',
+      name: t('navigation.calendar'),
       href: '/calendar',
       icon: Calendar
     }
   ]
 
   const recentProjects = [
-    { name: 'Inside App Design', color: 'bg-orange-500' },
-    { name: 'Salesattics CRM Design', color: 'bg-blue-500' },
-    { name: 'Internal Projects', color: 'bg-purple-500' }
+    { name: t('navigation.insideAppDesign'), color: 'bg-orange-500' },
+    { name: t('navigation.salesatticsCrmDesign'), color: 'bg-blue-500' },
+    { name: t('navigation.internalProjects'), color: 'bg-purple-500' }
   ]
 
   const toggleMenu = (menuName: string) => {
@@ -93,26 +95,26 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
       {/* Sidebar */}
       <div className={cn(
-        "fixed inset-y-0 left-0 z-50 w-64 bg-gray-900 transform transition-transform duration-300 ease-in-out flex flex-col",
+        "fixed inset-y-0 left-0 z-50 w-64 bg-white dark:bg-gray-900 transform transition-transform duration-300 ease-in-out flex flex-col border-r border-gray-200 dark:border-gray-800",
         isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
       )}>
         {/* Header */}
-        <div className="flex-shrink-0 flex items-center justify-between p-6 border-b border-gray-800">
+        <div className="flex-shrink-0 flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-800">
           <div className="flex items-center">
             <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-3">
               <div className="w-4 h-4 bg-white rounded-sm"></div>
             </div>
             <div>
-              <h1 className="text-lg font-bold text-white">dash</h1>
-              <div className="flex items-center text-xs text-gray-400">
-                <span>Product Co.</span>
+              <h1 className="text-lg font-bold text-gray-900 dark:text-white">{t('sidebar.brandName')}</h1>
+              <div className="flex items-center text-xs text-gray-500 dark:text-gray-400">
+                <span>{t('sidebar.companyName')}</span>
                 <ChevronDown className="w-3 h-3 ml-1" />
               </div>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="lg:hidden p-1 hover:bg-gray-800 rounded text-gray-400 hover:text-white"
+            className="lg:hidden p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-white"
           >
             <X size={20} />
           </button>
@@ -121,8 +123,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         {/* Navigation */}
         <nav className="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
           <div className="mb-6">
-            <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">
-              Menu
+            <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+              {t('navigation.menu')}
             </h3>
             <div className="space-y-1">
               {navigation.map((item) => {
@@ -131,12 +133,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     <Link
                       key={item.name}
                       to={item.href}
-                      className={cn(
-                        "flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200",
-                        isActive(item.href)
-                          ? "bg-blue-600 text-white"
-                          : "text-gray-300 hover:bg-gray-800 hover:text-white"
-                      )}
+                                             className={cn(
+                         "flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200",
+                         isActive(item.href)
+                           ? "bg-blue-600 text-white"
+                           : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white"
+                       )}
                     >
                       <item.icon className="w-5 h-5 mr-3" />
                       <span className="flex-1">{item.name}</span>
@@ -153,12 +155,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   <div key={item.name}>
                     <button
                       onClick={() => toggleMenu(item.name)}
-                      className={cn(
-                        "w-full flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200",
-                        expandedMenus.includes(item.name)
-                          ? "bg-gray-800 text-white"
-                          : "text-gray-300 hover:bg-gray-800 hover:text-white"
-                      )}
+                                             className={cn(
+                         "w-full flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200",
+                         expandedMenus.includes(item.name)
+                           ? "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
+                           : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white"
+                       )}
                     >
                       <item.icon className="w-5 h-5 mr-3" />
                       <span className="flex-1 text-left">{item.name}</span>
@@ -180,12 +182,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                           <Link
                             key={child.name}
                             to={child.href}
-                            className={cn(
-                              "block px-3 py-2 text-sm rounded-lg transition-colors duration-200",
-                              isActive(child.href)
-                                ? "bg-blue-600 text-white"
-                                : "text-gray-400 hover:bg-gray-800 hover:text-white"
-                            )}
+                                                         className={cn(
+                               "block px-3 py-2 text-sm rounded-lg transition-colors duration-200",
+                               isActive(child.href)
+                                 ? "bg-blue-600 text-white"
+                                 : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white"
+                             )}
                           >
                             {child.name}
                           </Link>
@@ -200,15 +202,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
           {/* Recent Projects */}
           <div>
-            <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">
-              Recent Project
+            <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+              {t('navigation.recentProjects')}
             </h3>
             <div className="space-y-2">
               {recentProjects.map((project) => (
-                <div
-                  key={project.name}
-                  className="flex items-center px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 rounded-lg transition-colors duration-200 cursor-pointer"
-                >
+                                 <div
+                   key={project.name}
+                   className="flex items-center px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-200 cursor-pointer"
+                 >
                   <div className={cn("w-2 h-2 rounded-full mr-3", project.color)}></div>
                   <span>{project.name}</span>
                 </div>
