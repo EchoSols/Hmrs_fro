@@ -1,8 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { LoadingProvider } from "@/contexts/LoadingContext";
 import LoadingOverlay from "@/components/LoadingOverlay";
+import MainLayout from "@/components/layouts/MainLayout";
 import LandingPage from "@/pages/LandingPage";
 import LoginPage from "@/pages/LoginPage";
+import TeamMembersPage from "@/pages/TeamMembersPage";
 
 // Layouts
 import AdminLayout from "@/layouts/AdminLayout";
@@ -286,10 +288,15 @@ function App() {
       <Router>
         <div className="App">
           <LoadingOverlay />
-          <Routes>
-            {/* Public Routes */}
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/login" element={<LoginPage />} />
+                  <Routes>
+          {/* Public Routes */}
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          
+          {/* Main App Routes */}
+          <Route path="/app" element={<MainLayout />}>
+            <Route path="team-members" element={<TeamMembersPage />} />
+          </Route>
 
           {/* Admin Routes */}
           <Route path="/admin" element={<AdminLayout />}>
