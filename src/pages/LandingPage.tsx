@@ -24,19 +24,19 @@ const ModernHeader = () => {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <header className="bg-black/90 backdrop-blur-md border-b border-gray-800 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14">
+    <header className="bg-black/90 backdrop-blur-md border-b border-gray-800 sticky top-0 z-50 w-full">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+        <div className="flex items-center justify-between h-12 sm:h-14">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="w-7 h-7 bg-white rounded-lg flex items-center justify-center mr-2.5">
-              <div className="w-3.5 h-3.5 bg-black rounded-sm"></div>
+            <div className="w-6 h-6 sm:w-7 sm:h-7 bg-white rounded-lg flex items-center justify-center mr-2 sm:mr-2.5">
+              <div className="w-3 h-3 sm:w-3.5 sm:h-3.5 bg-black rounded-sm"></div>
             </div>
-            <span className="text-lg font-light text-white tracking-wide">HR Pro</span>
+            <span className="text-base sm:text-lg font-light text-white tracking-wide">HR Pro</span>
           </div>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
             <a href="#features" className="text-gray-300 hover:text-white transition-colors text-xs font-medium tracking-wide">
               {t('landing.features')}
             </a>
@@ -52,19 +52,19 @@ const ModernHeader = () => {
           </nav>
 
           {/* Actions */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2 sm:space-x-3">
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-1.5 rounded-full text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-300"
+              className="p-1 sm:p-1.5 rounded-full text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-300"
             >
-              {theme === 'dark' ? <Sun className="w-3.5 h-3.5" /> : <Moon className="w-3.5 h-3.5" />}
+              {theme === 'dark' ? <Sun className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> : <Moon className="w-3 h-3 sm:w-3.5 sm:h-3.5" />}
             </button>
 
             {/* Language Switcher */}
-            <div className="relative">
-              <button className="flex items-center space-x-1.5 px-2.5 py-1.5 text-xs font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300">
-                <Globe className="w-3.5 h-3.5" />
+            <div className="relative hidden sm:block">
+              <button className="flex items-center space-x-1 sm:space-x-1.5 px-2 sm:px-2.5 py-1 sm:py-1.5 text-xs font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300">
+                <Globe className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                 <span>EN</span>
               </button>
             </div>
@@ -72,7 +72,7 @@ const ModernHeader = () => {
             {/* Sign In */}
             <a
               href="/login"
-              className="text-gray-300 hover:text-white transition-colors font-medium text-xs tracking-wide"
+              className="text-gray-300 hover:text-white transition-colors font-medium text-xs tracking-wide hidden sm:block"
             >
               {t('landing.signIn')}
             </a>
@@ -80,7 +80,7 @@ const ModernHeader = () => {
             {/* Get Started */}
             <a
               href="/login"
-              className="bg-white text-black hover:bg-gray-100 px-3 py-1.5 rounded-full font-medium text-xs transition-all duration-300"
+              className="bg-white text-black hover:bg-gray-100 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full font-medium text-xs transition-all duration-300"
             >
               {t('landing.getStarted')}
             </a>
@@ -96,57 +96,57 @@ const ModernHeroSection = () => {
   const { t } = useTranslation()
 
   return (
-    <section className="h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen w-full bg-gradient-to-br from-gray-900 via-black to-gray-800 flex items-center justify-center relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]"></div>
       </div>
       
-      <div className="w-full h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
+      <div className="w-full h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center relative z-10">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 xl:gap-16 items-center w-full max-w-6xl">
           {/* Content */}
-          <div className="space-y-6 text-center lg:text-left">
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-light text-white leading-tight tracking-wide">
+          <div className="space-y-4 sm:space-y-6 text-center xl:text-left order-2 xl:order-1">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-light text-white leading-tight tracking-wide">
               {t('landing.heroTitle')}
             </h1>
-            <p className="text-base md:text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto xl:mx-0">
               {t('landing.heroSubtitle')}
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center xl:justify-start">
               <a
                 href="/login"
-                className="bg-white text-black hover:bg-gray-100 px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 flex items-center justify-center group"
+                className="bg-white text-black hover:bg-gray-100 px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-medium text-xs sm:text-sm transition-all duration-300 flex items-center justify-center group"
               >
                 {t('landing.startFreeTrial')}
-                <ArrowRight className="w-3.5 h-3.5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-3 sm:w-3.5 h-3 sm:h-3.5 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
-              <button className="border border-white text-white hover:bg-white hover:text-black px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 flex items-center justify-center group">
-                <Play className="w-3.5 h-3.5 mr-2 group-hover:scale-110 transition-transform" />
+              <button className="border border-white text-white hover:bg-white hover:text-black px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-medium text-xs sm:text-sm transition-all duration-300 flex items-center justify-center group">
+                <Play className="w-3 sm:w-3.5 h-3 sm:h-3.5 mr-2 group-hover:scale-110 transition-transform" />
                 {t('landing.watchDemo')}
               </button>
             </div>
           </div>
 
           {/* Dashboard Preview */}
-          <div className="relative flex justify-center lg:justify-end">
-            <div className="bg-black border border-gray-800 rounded-2xl shadow-2xl p-6 transform rotate-1 hover:rotate-0 transition-all duration-500 hover:scale-105 max-w-sm w-full">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-lg font-medium text-white">HR Dashboard</h3>
-                <div className="flex space-x-1.5">
-                  <div className="w-2.5 h-2.5 bg-red-500 rounded-full"></div>
-                  <div className="w-2.5 h-2.5 bg-yellow-500 rounded-full"></div>
-                  <div className="w-2.5 h-2.5 bg-green-500 rounded-full"></div>
+          <div className="relative flex justify-center xl:justify-end order-1 xl:order-2">
+            <div className="bg-black border border-gray-800 rounded-xl sm:rounded-2xl shadow-2xl p-4 sm:p-6 transform rotate-1 hover:rotate-0 transition-all duration-500 hover:scale-105 w-full max-w-xs sm:max-w-sm">
+              <div className="flex items-center justify-between mb-4 sm:mb-6">
+                <h3 className="text-base sm:text-lg font-medium text-white">HR Dashboard</h3>
+                <div className="flex space-x-1 sm:space-x-1.5">
+                  <div className="w-2 sm:w-2.5 h-2 sm:h-2.5 bg-red-500 rounded-full"></div>
+                  <div className="w-2 sm:w-2.5 h-2 sm:h-2.5 bg-yellow-500 rounded-full"></div>
+                  <div className="w-2 sm:w-2.5 h-2 sm:h-2.5 bg-green-500 rounded-full"></div>
                 </div>
               </div>
               
               {/* Stats Grid */}
-              <div className="grid grid-cols-2 gap-3 mb-6">
-                <div className="bg-gray-900 border border-gray-800 p-3 rounded-lg">
-                  <div className="text-xl font-light text-white">1,234</div>
+              <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-4 sm:mb-6">
+                <div className="bg-gray-900 border border-gray-800 p-2 sm:p-3 rounded-lg">
+                  <div className="text-lg sm:text-xl font-light text-white">1,234</div>
                   <div className="text-xs text-gray-400 uppercase tracking-wide">Employees</div>
                 </div>
-                <div className="bg-gray-900 border border-gray-800 p-3 rounded-lg">
-                  <div className="text-xl font-light text-white">85%</div>
+                <div className="bg-gray-900 border border-gray-800 p-2 sm:p-3 rounded-lg">
+                  <div className="text-lg sm:text-xl font-light text-white">85%</div>
                   <div className="text-xs text-gray-400 uppercase tracking-wide">Satisfaction</div>
                 </div>
               </div>
@@ -561,9 +561,9 @@ const ModernFooter = () => {
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen w-full bg-black">
       <ModernHeader />
-      <main>
+      <main className="w-full">
         <ModernHeroSection />
         <ModernFeaturesSection />
         <ModernTestimonialsSection />
