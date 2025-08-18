@@ -38,32 +38,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       icon: Home
     },
     {
-      name: t('navigation.myTasks'),
-      href: '/tasks',
-      icon: CheckSquare,
-      badge: 4
-    },
-    {
-      name: t('navigation.activities'),
-      href: '/activities',
-      icon: Zap,
-      badge: 14
-    },
-    {
-      name: t('navigation.messages'),
-      href: '/messages',
-      icon: MessageSquare,
-      badge: 4
-    },
-    {
       name: t('navigation.teamMembers'),
       href: '/app/team-members',
       icon: Users
-    },
-    {
-      name: t('navigation.calendar'),
-      href: '/calendar',
-      icon: Calendar
     }
   ]
 
