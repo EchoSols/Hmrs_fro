@@ -26,45 +26,45 @@ const ModernHeader = () => {
   return (
     <header className="bg-black/90 backdrop-blur-md border-b border-gray-800 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center mr-3">
-              <div className="w-4 h-4 bg-black rounded-sm"></div>
+            <div className="w-7 h-7 bg-white rounded-lg flex items-center justify-center mr-2.5">
+              <div className="w-3.5 h-3.5 bg-black rounded-sm"></div>
             </div>
-            <span className="text-xl font-light text-white tracking-wide">HR Pro</span>
+            <span className="text-lg font-light text-white tracking-wide">HR Pro</span>
           </div>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-gray-300 hover:text-white transition-colors text-sm font-medium tracking-wide">
+          <nav className="hidden md:flex items-center space-x-6">
+            <a href="#features" className="text-gray-300 hover:text-white transition-colors text-xs font-medium tracking-wide">
               {t('landing.features')}
             </a>
-            <a href="#pricing" className="text-gray-300 hover:text-white transition-colors text-sm font-medium tracking-wide">
+            <a href="#pricing" className="text-gray-300 hover:text-white transition-colors text-xs font-medium tracking-wide">
               {t('landing.pricing')}
             </a>
-            <a href="#reviews" className="text-gray-300 hover:text-white transition-colors text-sm font-medium tracking-wide">
+            <a href="#reviews" className="text-gray-300 hover:text-white transition-colors text-xs font-medium tracking-wide">
               {t('landing.reviews')}
             </a>
-            <a href="#contact" className="text-gray-300 hover:text-white transition-colors text-sm font-medium tracking-wide">
+            <a href="#contact" className="text-gray-300 hover:text-white transition-colors text-xs font-medium tracking-wide">
               {t('landing.contact')}
             </a>
           </nav>
 
           {/* Actions */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3">
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-300"
+              className="p-1.5 rounded-full text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-300"
             >
-              {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+              {theme === 'dark' ? <Sun className="w-3.5 h-3.5" /> : <Moon className="w-3.5 h-3.5" />}
             </button>
 
             {/* Language Switcher */}
             <div className="relative">
-              <button className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300">
-                <Globe className="w-4 h-4" />
+              <button className="flex items-center space-x-1.5 px-2.5 py-1.5 text-xs font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300">
+                <Globe className="w-3.5 h-3.5" />
                 <span>EN</span>
               </button>
             </div>
@@ -72,7 +72,7 @@ const ModernHeader = () => {
             {/* Sign In */}
             <a
               href="/login"
-              className="text-gray-300 hover:text-white transition-colors font-medium text-sm tracking-wide"
+              className="text-gray-300 hover:text-white transition-colors font-medium text-xs tracking-wide"
             >
               {t('landing.signIn')}
             </a>
@@ -80,7 +80,7 @@ const ModernHeader = () => {
             {/* Get Started */}
             <a
               href="/login"
-              className="bg-white text-black hover:bg-gray-100 px-4 py-2 rounded-full font-medium text-sm transition-all duration-300"
+              className="bg-white text-black hover:bg-gray-100 px-3 py-1.5 rounded-full font-medium text-xs transition-all duration-300"
             >
               {t('landing.getStarted')}
             </a>
@@ -96,32 +96,32 @@ const ModernHeroSection = () => {
   const { t } = useTranslation()
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 flex items-center justify-center relative overflow-hidden">
+    <section className="h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 flex items-center justify-center relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]"></div>
       </div>
       
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="w-full h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
           {/* Content */}
-          <div className="space-y-8 text-center lg:text-left">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-white leading-tight tracking-wide">
+          <div className="space-y-6 text-center lg:text-left">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-light text-white leading-tight tracking-wide">
               {t('landing.heroTitle')}
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-base md:text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
               {t('landing.heroSubtitle')}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
               <a
                 href="/login"
-                className="bg-white text-black hover:bg-gray-100 px-8 py-3 rounded-full font-medium text-base transition-all duration-300 flex items-center justify-center group"
+                className="bg-white text-black hover:bg-gray-100 px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 flex items-center justify-center group"
               >
                 {t('landing.startFreeTrial')}
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-3.5 h-3.5 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
-              <button className="border border-white text-white hover:bg-white hover:text-black px-8 py-3 rounded-full font-medium text-base transition-all duration-300 flex items-center justify-center group">
-                <Play className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
+              <button className="border border-white text-white hover:bg-white hover:text-black px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 flex items-center justify-center group">
+                <Play className="w-3.5 h-3.5 mr-2 group-hover:scale-110 transition-transform" />
                 {t('landing.watchDemo')}
               </button>
             </div>
@@ -129,36 +129,36 @@ const ModernHeroSection = () => {
 
           {/* Dashboard Preview */}
           <div className="relative flex justify-center lg:justify-end">
-            <div className="bg-black border border-gray-800 rounded-3xl shadow-2xl p-8 transform rotate-2 hover:rotate-0 transition-all duration-500 hover:scale-105 max-w-md w-full">
-              <div className="flex items-center justify-between mb-8">
-                <h3 className="text-xl font-medium text-white">HR Dashboard</h3>
-                <div className="flex space-x-2">
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+            <div className="bg-black border border-gray-800 rounded-2xl shadow-2xl p-6 transform rotate-1 hover:rotate-0 transition-all duration-500 hover:scale-105 max-w-sm w-full">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-lg font-medium text-white">HR Dashboard</h3>
+                <div className="flex space-x-1.5">
+                  <div className="w-2.5 h-2.5 bg-red-500 rounded-full"></div>
+                  <div className="w-2.5 h-2.5 bg-yellow-500 rounded-full"></div>
+                  <div className="w-2.5 h-2.5 bg-green-500 rounded-full"></div>
                 </div>
               </div>
               
               {/* Stats Grid */}
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                <div className="bg-gray-900 border border-gray-800 p-4 rounded-xl">
-                  <div className="text-2xl font-light text-white">1,234</div>
+              <div className="grid grid-cols-2 gap-3 mb-6">
+                <div className="bg-gray-900 border border-gray-800 p-3 rounded-lg">
+                  <div className="text-xl font-light text-white">1,234</div>
                   <div className="text-xs text-gray-400 uppercase tracking-wide">Employees</div>
                 </div>
-                <div className="bg-gray-900 border border-gray-800 p-4 rounded-xl">
-                  <div className="text-2xl font-light text-white">85%</div>
+                <div className="bg-gray-900 border border-gray-800 p-3 rounded-lg">
+                  <div className="text-xl font-light text-white">85%</div>
                   <div className="text-xs text-gray-400 uppercase tracking-wide">Satisfaction</div>
                 </div>
               </div>
 
               {/* Chart Placeholder */}
-              <div className="space-y-3">
+              <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-400">Performance</span>
-                  <span className="text-sm font-medium text-white">92%</span>
+                  <span className="text-xs text-gray-400">Performance</span>
+                  <span className="text-xs font-medium text-white">92%</span>
                 </div>
-                <div className="w-full bg-gray-800 rounded-full h-1.5">
-                  <div className="bg-white h-1.5 rounded-full transition-all duration-1000" style={{ width: '92%' }}></div>
+                <div className="w-full bg-gray-800 rounded-full h-1">
+                  <div className="bg-white h-1 rounded-full transition-all duration-1000" style={{ width: '92%' }}></div>
                 </div>
               </div>
             </div>
@@ -344,133 +344,133 @@ const DemoAccessSection = () => {
   const { t } = useTranslation()
 
   return (
-    <section className="py-20 bg-black">
+    <section className="py-16 bg-black">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-light text-white mb-6 tracking-wide">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl md:text-3xl font-light text-white mb-4 tracking-wide">
             Try HR Pro Today
           </h2>
-          <p className="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm text-gray-400 max-w-3xl mx-auto leading-relaxed">
             Experience the power of AI-driven HR management. Access our demo with different user roles to see how HR Pro transforms your workplace.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Admin Demo */}
-          <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-gray-700 hover:bg-gray-800/50 transition-all duration-300 group">
-            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-gray-700 hover:bg-gray-800/50 transition-all duration-300 group">
+            <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
             </div>
-            <h3 className="text-xl font-medium text-white mb-3">Administrator</h3>
-            <p className="text-gray-400 mb-6 text-sm leading-relaxed">
+            <h3 className="text-lg font-medium text-white mb-2">Administrator</h3>
+            <p className="text-gray-400 mb-4 text-xs leading-relaxed">
               Full system control, employee management, and comprehensive analytics.
             </p>
             <a
               href="/admin"
-              className="inline-flex items-center justify-center w-full bg-white text-black hover:bg-gray-100 px-4 py-3 rounded-xl font-medium text-sm transition-all duration-300 group-hover:scale-105"
+              className="inline-flex items-center justify-center w-full bg-white text-black hover:bg-gray-100 px-3 py-2 rounded-lg font-medium text-xs transition-all duration-300 group-hover:scale-105"
             >
               Access Admin Demo
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-3.5 h-3.5 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
 
           {/* Employee Demo */}
-          <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-gray-700 hover:bg-gray-800/50 transition-all duration-300 group">
-            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors">
-              <Users className="w-6 h-6 text-white" />
+          <div className="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-gray-700 hover:bg-gray-800/50 transition-all duration-300 group">
+            <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">
+              <Users className="w-5 h-5 text-white" />
             </div>
-            <h3 className="text-xl font-medium text-white mb-3">Employee</h3>
-            <p className="text-gray-400 mb-6 text-sm leading-relaxed">
+            <h3 className="text-lg font-medium text-white mb-2">Employee</h3>
+            <p className="text-gray-400 mb-4 text-xs leading-relaxed">
               Self-service portal, time tracking, leave management, and personal dashboard.
             </p>
             <a
               href="/employee"
-              className="inline-flex items-center justify-center w-full bg-white text-black hover:bg-gray-100 px-4 py-3 rounded-xl font-medium text-sm transition-all duration-300 group-hover:scale-105"
+              className="inline-flex items-center justify-center w-full bg-white text-black hover:bg-gray-100 px-3 py-2 rounded-lg font-medium text-xs transition-all duration-300 group-hover:scale-105"
             >
               Access Employee Demo
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-3.5 h-3.5 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
 
           {/* HR Demo */}
-          <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-gray-700 hover:bg-gray-800/50 transition-all duration-300 group">
-            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-gray-700 hover:bg-gray-800/50 transition-all duration-300 group">
+            <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
             </div>
-            <h3 className="text-xl font-medium text-white mb-3">HR Manager</h3>
-            <p className="text-gray-400 mb-6 text-sm leading-relaxed">
+            <h3 className="text-lg font-medium text-white mb-2">HR Manager</h3>
+            <p className="text-gray-400 mb-4 text-xs leading-relaxed">
               Recruitment, performance management, compliance, and workforce analytics.
             </p>
             <a
               href="/hr"
-              className="inline-flex items-center justify-center w-full bg-white text-black hover:bg-gray-100 px-4 py-3 rounded-xl font-medium text-sm transition-all duration-300 group-hover:scale-105"
+              className="inline-flex items-center justify-center w-full bg-white text-black hover:bg-gray-100 px-3 py-2 rounded-lg font-medium text-xs transition-all duration-300 group-hover:scale-105"
             >
               Access HR Demo
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-3.5 h-3.5 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
 
           {/* Manager Demo */}
-          <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-gray-700 hover:bg-gray-800/50 transition-all duration-300 group">
-            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-gray-700 hover:bg-gray-800/50 transition-all duration-300 group">
+            <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
               </svg>
             </div>
-            <h3 className="text-xl font-medium text-white mb-3">Manager</h3>
-            <p className="text-gray-400 mb-6 text-sm leading-relaxed">
+            <h3 className="text-lg font-medium text-white mb-2">Manager</h3>
+            <p className="text-gray-400 mb-4 text-xs leading-relaxed">
               Team management, performance reviews, project tracking, and resource allocation.
             </p>
             <a
               href="/manager"
-              className="inline-flex items-center justify-center w-full bg-white text-black hover:bg-gray-100 px-4 py-3 rounded-xl font-medium text-sm transition-all duration-300 group-hover:scale-105"
+              className="inline-flex items-center justify-center w-full bg-white text-black hover:bg-gray-100 px-3 py-2 rounded-lg font-medium text-xs transition-all duration-300 group-hover:scale-105"
             >
               Access Manager Demo
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-3.5 h-3.5 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
 
           {/* Trainer Demo */}
-          <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-gray-700 hover:bg-gray-800/50 transition-all duration-300 group">
-            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-gray-700 hover:bg-gray-800/50 transition-all duration-300 group">
+            <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
             </div>
-            <h3 className="text-xl font-medium text-white mb-3">Trainer</h3>
-            <p className="text-gray-400 mb-6 text-sm leading-relaxed">
+            <h3 className="text-lg font-medium text-white mb-2">Trainer</h3>
+            <p className="text-gray-400 mb-4 text-xs leading-relaxed">
               Course management, learning paths, assessments, and training analytics.
             </p>
             <a
               href="/trainer"
-              className="inline-flex items-center justify-center w-full bg-white text-black hover:bg-gray-100 px-4 py-3 rounded-xl font-medium text-sm transition-all duration-300 group-hover:scale-105"
+              className="inline-flex items-center justify-center w-full bg-white text-black hover:bg-gray-100 px-3 py-2 rounded-lg font-medium text-xs transition-all duration-300 group-hover:scale-105"
             >
               Access Trainer Demo
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-3.5 h-3.5 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
 
           {/* Auditor Demo */}
-          <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-gray-700 hover:bg-gray-800/50 transition-all duration-300 group">
-            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-gray-700 hover:bg-gray-800/50 transition-all duration-300 group">
+            <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
             </div>
-            <h3 className="text-xl font-medium text-white mb-3">Auditor</h3>
-            <p className="text-gray-400 mb-6 text-sm leading-relaxed">
+            <h3 className="text-lg font-medium text-white mb-2">Auditor</h3>
+            <p className="text-gray-400 mb-4 text-xs leading-relaxed">
               Compliance monitoring, audit trails, risk assessment, and regulatory reporting.
             </p>
             <a
               href="/auditor"
-              className="inline-flex items-center justify-center w-full bg-white text-black hover:bg-gray-100 px-4 py-3 rounded-xl font-medium text-sm transition-all duration-300 group-hover:scale-105"
+              className="inline-flex items-center justify-center w-full bg-white text-black hover:bg-gray-100 px-3 py-2 rounded-lg font-medium text-xs transition-all duration-300 group-hover:scale-105"
             >
               Access Auditor Demo
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-3.5 h-3.5 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
         </div>
