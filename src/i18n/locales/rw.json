@@ -175,5 +175,63 @@
     "en": "English",
     "fr": "Français",
     "rw": "Kinyarwanda"
+  },
+  "landing": {
+    "features": "Ibikoresho",
+    "pricing": "Amadolari",
+    "reviews": "Ibisubizo",
+    "contact": "Twandikire",
+    "signIn": "Injira",
+    "getStarted": "Tangira",
+    "heroTitle": "Koroshya ibikorwa byawe by'umukozi ukoresheje ibisubizo by'ubwenge",
+    "heroSubtitle": "Koroshya ubwishingizi, gucunga amashuri, kurikirana ibikorwa, kandi wizigire ko ufata amabwiriza ukoresheje urubuga rwacu rwuzuye rwo gucunga umukozi.",
+    "startFreeTrial": "Tangira kugenzura kubuntu",
+    "watchDemo": "Reba demo",
+    "featuresTitle": "Ibintu byose ukeneye kugucunga abakozi bawe",
+    "featuresSubtitle": "Ibikoresho by'ingufu byateguwe kugira ngo koroshye ibikorwa byawe by'umukozi kandi byongere ubworozi mu ishyirahamwe ryawe.",
+    "feature1": {
+      "title": "Gucunga umukozi",
+      "description": "Amakuru yuzuye y'umukozi, kwongeramo, kandi gucunga ubuzima burambye hamwe n'ubushakashatsi bw'inyongera na filitari."
+    },
+    "feature2": {
+      "title": "Kurikirana ibikorwa",
+      "description": "Shyiraho intego, kurikirane inyigisho, kandi ukore ibisuzumira by'ibikorwa hamwe n'ibibutso by'ubwenge kandi analytics."
+    },
+    "feature3": {
+      "title": "Kujya kumurongo n'umutekano",
+      "description": "Wizigire ko ufata amabwiriza y'ubutegetsi ukoresheje raporo z'ubwenge, inzira z'ubushakashatsi, kandi gucunga amakuru y'umutekano."
+    },
+    "feature4": {
+      "title": "Igihe n'ubwiyongere",
+      "description": "Kurikirane amasaha y'akazi, gucunga amatangazo, kandi gucunga ibisabwe by'uburenganzira ukoresheje ubwenge."
+    },
+    "feature5": {
+      "title": "Analytics n'iraporo",
+      "description": "Shobora kumenya ibikorwa by'umukozi, metriko z'ubworozi, kandi analytics y'ibikorwa ukoresheje dashboard zihindurwa."
+    },
+    "feature6": {
+      "title": "Ubumenyi bw'ubwenge",
+      "description": "Koresha ubwenge bw'ubwenge kugira ngo ubone analytics y'ibizaza, inama z'ubuhanga, kandi ibikorwa by'ubwenge."
+    },
+    "testimonialsTitle": "Byizigirwa n'abakora umukozi ku isi yose",
+    "testimonialsSubtitle": "Reba ibyo abakiriya bacu bavuga kuri HR Pro",
+    "testimonial1": {
+      "content": "HR Pro yahindutse uko dukora umukozi. Ibikoresho by'ubwenge bidufasha gufata amasaha buri cyumweru."
+    },
+    "testimonial2": {
+      "content": "Ubushobozi bwo gusuzuma n'iraporo biduha ubumenyi twatige tubura. Byakomeye!"
+    },
+    "testimonial3": {
+      "content": "Gushyira mu bikorwa byari byoroshye kandi ishyirahamwe ryo gufasha ni rya nyuma. Ibikorwa byacu by'umukozi ubu ni 10x byoroshye."
+    },
+    "ctaTitle": "Uteguye guhindura ibikorwa byawe by'umukozi?",
+    "ctaSubtitle": "Shyiramo amashyirahamwe y'amagana yatangiye gukoresha HR Pro kugira ngo koroshye gucunga abakozi bawo.",
+    "contactUs": "Twandikire",
+    "footerDescription": "Urubuga rw'ubu rwo gucunga umukozi rwateguwe kugira ngo koroshye ibikorwa by'umukozi kandi byongere ubworozi.",
+    "footerProduct": "Ibicuruzwa",
+    "footerCompany": "Ishyirahamwe",
+    "about": "Ibyerekeye",
+    "privacy": "Ibanga",
+    "allRightsReserved": "Amabwiriza yose yarangiwe."
   }
 }

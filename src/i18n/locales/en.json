@@ -175,5 +175,63 @@
     "en": "English",
     "fr": "Français",
     "rw": "Kinyarwanda"
+  },
+  "landing": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "reviews": "Reviews",
+    "contact": "Contact",
+    "signIn": "Sign In",
+    "getStarted": "Get Started",
+    "heroTitle": "Streamline Your HR Operations with AI-Powered Solutions",
+    "heroSubtitle": "Automate recruitment, manage payroll, track performance, and ensure compliance with our comprehensive HR management platform.",
+    "startFreeTrial": "Start Free Trial",
+    "watchDemo": "Watch Demo",
+    "featuresTitle": "Everything you need to manage your workforce",
+    "featuresSubtitle": "Powerful tools designed to streamline your HR processes and boost productivity across your organization.",
+    "feature1": {
+      "title": "Employee Management",
+      "description": "Comprehensive employee profiles, onboarding, and lifecycle management with advanced search and filtering."
+    },
+    "feature2": {
+      "title": "Performance Tracking",
+      "description": "Set goals, track progress, and conduct performance reviews with automated reminders and analytics."
+    },
+    "feature3": {
+      "title": "Compliance & Security",
+      "description": "Ensure regulatory compliance with automated reporting, audit trails, and secure data management."
+    },
+    "feature4": {
+      "title": "Time & Attendance",
+      "description": "Track work hours, manage schedules, and handle leave requests with intelligent automation."
+    },
+    "feature5": {
+      "title": "Analytics & Reporting",
+      "description": "Get insights into workforce trends, productivity metrics, and performance analytics with customizable dashboards."
+    },
+    "feature6": {
+      "title": "AI-Powered Insights",
+      "description": "Leverage artificial intelligence for predictive analytics, talent recommendations, and automated workflows."
+    },
+    "testimonialsTitle": "Trusted by HR professionals worldwide",
+    "testimonialsSubtitle": "See what our customers say about HR Pro",
+    "testimonial1": {
+      "content": "HR Pro has transformed how we manage our workforce. The automation features save us hours every week."
+    },
+    "testimonial2": {
+      "content": "The analytics and reporting capabilities give us insights we never had before. Highly recommended!"
+    },
+    "testimonial3": {
+      "content": "Implementation was smooth and the support team is exceptional. Our HR processes are now 10x more efficient."
+    },
+    "ctaTitle": "Ready to transform your HR operations?",
+    "ctaSubtitle": "Join thousands of companies already using HR Pro to streamline their workforce management.",
+    "contactUs": "Contact Us",
+    "footerDescription": "Modern HR management platform designed to streamline workforce operations and boost productivity.",
+    "footerProduct": "Product",
+    "footerCompany": "Company",
+    "about": "About",
+    "privacy": "Privacy",
+    "allRightsReserved": "All rights reserved."
   }
 }
