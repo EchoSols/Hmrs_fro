@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { 
   Users, 
   UserPlus, 
@@ -8,8 +9,26 @@ import {
   Calendar,
   AlertCircle
 } from 'lucide-react'
+import { useLoadingState } from '@/hooks/useLoadingState'
+import { StatsSkeleton, ChartSkeleton, CardSkeleton } from '@/components/LoadingSkeleton'
 
 const DashboardPage = () => {
+  const { isLoading, withLoading } = useLoadingState({ 
+    delay: 500, 
+    message: 'Loading dashboard data...' 
+  })
+
+  // Simulate data loading
+  useEffect(() => {
+    const loadDashboardData = async () => {
+      await withLoading(async () => {
+        // Simulate API call
+        await new Promise(resolve => setTimeout(resolve, 1000))
+      })
+    }
+    loadDashboardData()
+  }, [withLoading])
+
   const stats = [
     {
       name: 'Total Employees',
@@ -96,6 +115,31 @@ const DashboardPage = () => {
       type: 'payroll'
     }
   ]
+
+  if (isLoading) {
+    return (
+      <div className="space-y-6">
+        {/* Page Header */}
+        <div>
+          <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
+          <p className="text-gray-600">Welcome back! Here's what's happening with your HR operations.</p>
+        </div>
+        
+        {/* Loading Skeletons */}
+        <StatsSkeleton />
+        
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <ChartSkeleton className="lg:col-span-2" />
+          <CardSkeleton />
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <CardSkeleton />
+          <CardSkeleton />
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="space-y-6">

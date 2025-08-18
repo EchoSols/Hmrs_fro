@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Eye, EyeOff, Mail, Lock, ArrowLeft, AlertCircle, CheckCircle } from 'lucide-react'
+import { useLoadingState } from '@/hooks/useLoadingState'
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({
@@ -8,10 +9,13 @@ const LoginPage = () => {
     password: ''
   })
   const [showPassword, setShowPassword] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
   const navigate = useNavigate()
+  const { isLoading, withLoading } = useLoadingState({ 
+    delay: 300, 
+    message: 'Signing you in...' 
+  })
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
@@ -25,12 +29,11 @@ const LoginPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setIsLoading(true)
     setError('')
     setSuccess('')
 
-    // Simulate API call
-    try {
+    await withLoading(async () => {
+      // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500))
       
       // Basic validation
@@ -47,12 +50,9 @@ const LoginPage = () => {
       setTimeout(() => {
         navigate('/dashboard') // You can change this to your dashboard route
       }, 1000)
-      
-    } catch (err) {
+    }).catch((err) => {
       setError(err instanceof Error ? err.message : 'Login failed. Please try again.')
-    } finally {
-      setIsLoading(false)
-    }
+    })
   }
 
   const handleContactAdmin = () => {

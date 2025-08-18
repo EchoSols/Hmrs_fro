@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { LoadingProvider } from "@/contexts/LoadingContext";
+import LoadingOverlay from "@/components/LoadingOverlay";
 import LandingPage from "@/pages/LandingPage";
 import LoginPage from "@/pages/LoginPage";
 
@@ -280,12 +282,14 @@ import TrainerMessagesPage from "@/pages/trainer/MessagesPage";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Routes>
-          {/* Public Routes */}
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/login" element={<LoginPage />} />
+    <LoadingProvider>
+      <Router>
+        <div className="App">
+          <LoadingOverlay />
+          <Routes>
+            {/* Public Routes */}
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/login" element={<LoginPage />} />
 
           {/* Admin Routes */}
           <Route path="/admin" element={<AdminLayout />}>
@@ -695,6 +699,7 @@ function App() {
         </Routes>
       </div>
     </Router>
+    </LoadingProvider>
   );
 }
 
