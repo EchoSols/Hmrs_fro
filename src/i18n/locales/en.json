@@ -232,6 +232,79 @@
     "footerCompany": "Company",
     "about": "About",
     "privacy": "Privacy",
-    "allRightsReserved": "All rights reserved."
+    "allRightsReserved": "All rights reserved.",
+    "pricingTitle": "Simple, transparent pricing",
+    "pricingSubtitle": "Choose the plan that fits your organization's needs",
+    "freeTrial": "Free Trial",
+    "perMonth": "per month",
+    "perYear": "per year",
+    "startFreeTrial": "Start Free Trial",
+    "contactSales": "Contact Sales",
+    "mostPopular": "Most Popular",
+    "basicPlan": {
+      "name": "Basic",
+      "price": "29",
+      "description": "Perfect for small teams getting started",
+      "features": [
+        "Up to 50 employees",
+        "Basic employee management",
+        "Time tracking",
+        "Basic reporting",
+        "Email support"
+      ]
+    },
+    "professionalPlan": {
+      "name": "Professional",
+      "price": "79",
+      "description": "Ideal for growing organizations",
+      "features": [
+        "Up to 200 employees",
+        "Advanced employee management",
+        "Performance tracking",
+        "Advanced analytics",
+        "Priority support",
+        "Custom integrations"
+      ]
+    },
+    "enterprisePlan": {
+      "name": "Enterprise",
+      "price": "199",
+      "description": "For large organizations with complex needs",
+      "features": [
+        "Unlimited employees",
+        "Full HR suite",
+        "AI-powered insights",
+        "Custom workflows",
+        "Dedicated support",
+        "Advanced security",
+        "White-label options"
+      ]
+    },
+    "whyChooseUs": "Why Choose HR Pro?",
+    "whyChooseSubtitle": "Discover what makes us the leading HR management solution",
+    "reason1": {
+      "title": "AI-Powered Automation",
+      "description": "Leverage artificial intelligence to automate repetitive tasks and gain predictive insights"
+    },
+    "reason2": {
+      "title": "Enterprise Security",
+      "description": "Bank-level security with SOC 2 compliance and end-to-end encryption"
+    },
+    "reason3": {
+      "title": "24/7 Support",
+      "description": "Round-the-clock support from our expert team to ensure your success"
+    },
+    "reason4": {
+      "title": "Easy Integration",
+      "description": "Seamlessly integrate with your existing tools and workflows"
+    },
+    "demoAccessTitle": "Explore Our Platform",
+    "demoAccessSubtitle": "Experience the power of HR Pro with our interactive demos",
+    "adminDemo": "Administrator Dashboard",
+    "employeeDemo": "Employee Portal",
+    "hrDemo": "HR Management",
+    "managerDemo": "Manager Tools",
+    "trainerDemo": "Training Platform",
+    "auditorDemo": "Audit & Compliance"
   }
 }

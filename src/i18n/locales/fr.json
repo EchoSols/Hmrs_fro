@@ -232,6 +232,79 @@
     "footerCompany": "Entreprise",
     "about": "À propos",
     "privacy": "Confidentialité",
-    "allRightsReserved": "Tous droits réservés."
+    "allRightsReserved": "Tous droits réservés.",
+    "pricingTitle": "Tarification simple et transparente",
+    "pricingSubtitle": "Choisissez le plan qui correspond aux besoins de votre organisation",
+    "freeTrial": "Essai gratuit",
+    "perMonth": "par mois",
+    "perYear": "par an",
+    "startFreeTrial": "Commencer l'essai gratuit",
+    "contactSales": "Contacter les ventes",
+    "mostPopular": "Le plus populaire",
+    "basicPlan": {
+      "name": "Basique",
+      "price": "29",
+      "description": "Parfait pour les petites équipes qui débutent",
+      "features": [
+        "Jusqu'à 50 employés",
+        "Gestion basique des employés",
+        "Suivi du temps",
+        "Rapports de base",
+        "Support par email"
+      ]
+    },
+    "professionalPlan": {
+      "name": "Professionnel",
+      "price": "79",
+      "description": "Idéal pour les organisations en croissance",
+      "features": [
+        "Jusqu'à 200 employés",
+        "Gestion avancée des employés",
+        "Suivi des performances",
+        "Analyses avancées",
+        "Support prioritaire",
+        "Intégrations personnalisées"
+      ]
+    },
+    "enterprisePlan": {
+      "name": "Entreprise",
+      "price": "199",
+      "description": "Pour les grandes organisations avec des besoins complexes",
+      "features": [
+        "Employés illimités",
+        "Suite RH complète",
+        "Aperçus alimentés par l'IA",
+        "Flux de travail personnalisés",
+        "Support dédié",
+        "Sécurité avancée",
+        "Options de marque blanche"
+      ]
+    },
+    "whyChooseUs": "Pourquoi choisir HR Pro ?",
+    "whyChooseSubtitle": "Découvrez ce qui fait de nous la solution de gestion RH leader",
+    "reason1": {
+      "title": "Automatisation alimentée par l'IA",
+      "description": "Tirez parti de l'intelligence artificielle pour automatiser les tâches répétitives et obtenir des aperçus prédictifs"
+    },
+    "reason2": {
+      "title": "Sécurité d'entreprise",
+      "description": "Sécurité de niveau bancaire avec conformité SOC 2 et chiffrement de bout en bout"
+    },
+    "reason3": {
+      "title": "Support 24/7",
+      "description": "Support 24h/24 et 7j/7 de notre équipe d'experts pour assurer votre succès"
+    },
+    "reason4": {
+      "title": "Intégration facile",
+      "description": "Intégrez-vous parfaitement à vos outils et flux de travail existants"
+    },
+    "demoAccessTitle": "Explorez notre plateforme",
+    "demoAccessSubtitle": "Découvrez la puissance de HR Pro avec nos démos interactives",
+    "adminDemo": "Tableau de bord administrateur",
+    "employeeDemo": "Portail employé",
+    "hrDemo": "Gestion RH",
+    "managerDemo": "Outils de gestionnaire",
+    "trainerDemo": "Plateforme de formation",
+    "auditorDemo": "Audit et conformité"
   }
 }

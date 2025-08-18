@@ -14,9 +14,13 @@ import {
   CheckCircle,
   Globe,
   Sun,
-  Moon
+  Moon,
+  ChevronDown,
+  Check,
+  Brain
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import LanguageSwitcher from '@/components/ui/LanguageSwitcher'
 
 // Modern Header Component
 const ModernHeader = () => {
@@ -62,11 +66,8 @@ const ModernHeader = () => {
             </button>
 
             {/* Language Switcher */}
-            <div className="relative hidden sm:block">
-              <button className="flex items-center space-x-1 sm:space-x-1.5 px-2 sm:px-2.5 py-1 sm:py-1.5 text-xs font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300">
-                <Globe className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-                <span>EN</span>
-              </button>
+            <div className="hidden sm:block">
+              <LanguageSwitcher className="text-gray-300 hover:text-white" />
             </div>
 
             {/* Sign In */}
@@ -115,15 +116,18 @@ const ModernHeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-3 justify-center xl:justify-start">
               <a
                 href="/login"
-                className="bg-white text-black hover:bg-gray-100 px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-medium text-xs sm:text-sm transition-all duration-300 flex items-center justify-center group"
+                className="bg-white text-black hover:bg-gray-100 px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-medium text-xs sm:text-sm transition-all duration-300 flex items-center justify-center group hover:scale-105"
               >
                 {t('landing.startFreeTrial')}
                 <ArrowRight className="w-3 sm:w-3.5 h-3 sm:h-3.5 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
-              <button className="border border-white text-white hover:bg-white hover:text-black px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-medium text-xs sm:text-sm transition-all duration-300 flex items-center justify-center group">
+              <a
+                href="#demo"
+                className="border border-white text-white hover:bg-white hover:text-black px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-medium text-xs sm:text-sm transition-all duration-300 flex items-center justify-center group hover:scale-105"
+              >
                 <Play className="w-3 sm:w-3.5 h-3 sm:h-3.5 mr-2 group-hover:scale-110 transition-transform" />
                 {t('landing.watchDemo')}
-              </button>
+              </a>
             </div>
           </div>
 
@@ -339,12 +343,206 @@ const ModernTestimonialsSection = () => {
   )
 }
 
+// Pricing Section
+const PricingSection = () => {
+  const { t } = useTranslation()
+
+  return (
+    <section id="pricing" className="bg-black py-16 sm:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-light text-white mb-4">
+            {t('landing.pricingTitle')}
+          </h2>
+          <p className="text-sm sm:text-lg text-gray-300 max-w-3xl mx-auto">
+            {t('landing.pricingSubtitle')}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12">
+          {/* Basic Plan */}
+          <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 hover:border-white/20 transition-all duration-300 hover:scale-105">
+            <div className="text-center mb-8">
+              <h3 className="text-xl sm:text-2xl font-medium text-white mb-2">
+                {t('landing.basicPlan.name')}
+              </h3>
+              <p className="text-sm text-gray-400 mb-6">
+                {t('landing.basicPlan.description')}
+              </p>
+              <div className="mb-6">
+                <span className="text-4xl sm:text-5xl font-light text-white">${t('landing.basicPlan.price')}</span>
+                <span className="text-sm text-gray-400 ml-2">{t('landing.perMonth')}</span>
+              </div>
+              <a
+                href="/login"
+                className="w-full bg-white text-black hover:bg-gray-100 px-6 py-3 rounded-full font-medium text-sm transition-all duration-300 flex items-center justify-center group"
+              >
+                {t('landing.startFreeTrial')}
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+            <ul className="space-y-3">
+              {t('landing.basicPlan.features', { returnObjects: true }).map((feature: string, index: number) => (
+                <li key={index} className="flex items-center text-sm text-gray-300">
+                  <Check className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Professional Plan */}
+          <div className="bg-gray-900 border-2 border-white rounded-2xl p-6 sm:p-8 relative hover:scale-105 transition-all duration-300">
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+              <span className="bg-white text-black px-4 py-1 rounded-full text-xs font-medium">
+                {t('landing.mostPopular')}
+              </span>
+            </div>
+            <div className="text-center mb-8">
+              <h3 className="text-xl sm:text-2xl font-medium text-white mb-2">
+                {t('landing.professionalPlan.name')}
+              </h3>
+              <p className="text-sm text-gray-400 mb-6">
+                {t('landing.professionalPlan.description')}
+              </p>
+              <div className="mb-6">
+                <span className="text-4xl sm:text-5xl font-light text-white">${t('landing.professionalPlan.price')}</span>
+                <span className="text-sm text-gray-400 ml-2">{t('landing.perMonth')}</span>
+              </div>
+              <a
+                href="/login"
+                className="w-full bg-white text-black hover:bg-gray-100 px-6 py-3 rounded-full font-medium text-sm transition-all duration-300 flex items-center justify-center group"
+              >
+                {t('landing.startFreeTrial')}
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+            <ul className="space-y-3">
+              {t('landing.professionalPlan.features', { returnObjects: true }).map((feature: string, index: number) => (
+                <li key={index} className="flex items-center text-sm text-gray-300">
+                  <Check className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Enterprise Plan */}
+          <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 hover:border-white/20 transition-all duration-300 hover:scale-105">
+            <div className="text-center mb-8">
+              <h3 className="text-xl sm:text-2xl font-medium text-white mb-2">
+                {t('landing.enterprisePlan.name')}
+              </h3>
+              <p className="text-sm text-gray-400 mb-6">
+                {t('landing.enterprisePlan.description')}
+              </p>
+              <div className="mb-6">
+                <span className="text-4xl sm:text-5xl font-light text-white">${t('landing.enterprisePlan.price')}</span>
+                <span className="text-sm text-gray-400 ml-2">{t('landing.perMonth')}</span>
+              </div>
+              <a
+                href="/login"
+                className="w-full border border-white text-white hover:bg-white hover:text-black px-6 py-3 rounded-full font-medium text-sm transition-all duration-300 flex items-center justify-center group"
+              >
+                {t('landing.contactSales')}
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+            <ul className="space-y-3">
+              {t('landing.enterprisePlan.features', { returnObjects: true }).map((feature: string, index: number) => (
+                <li key={index} className="flex items-center text-sm text-gray-300">
+                  <Check className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// Why Choose Us Section
+const WhyChooseUsSection = () => {
+  const { t } = useTranslation()
+
+  return (
+    <section className="bg-gray-900 py-16 sm:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-light text-white mb-4">
+            {t('landing.whyChooseUs')}
+          </h2>
+          <p className="text-sm sm:text-lg text-gray-300 max-w-3xl mx-auto">
+            {t('landing.whyChooseSubtitle')}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
+          {/* AI-Powered Automation */}
+          <div className="bg-black border border-gray-800 rounded-2xl p-6 sm:p-8 hover:border-white/20 transition-all duration-300 hover:scale-105">
+            <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
+              <Brain className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-xl font-medium text-white mb-4">
+              {t('landing.reason1.title')}
+            </h3>
+            <p className="text-sm text-gray-300">
+              {t('landing.reason1.description')}
+            </p>
+          </div>
+
+          {/* Enterprise Security */}
+          <div className="bg-black border border-gray-800 rounded-2xl p-6 sm:p-8 hover:border-white/20 transition-all duration-300 hover:scale-105">
+            <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-6">
+              <Shield className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-xl font-medium text-white mb-4">
+              {t('landing.reason2.title')}
+            </h3>
+            <p className="text-sm text-gray-300">
+              {t('landing.reason2.description')}
+            </p>
+          </div>
+
+          {/* 24/7 Support */}
+          <div className="bg-black border border-gray-800 rounded-2xl p-6 sm:p-8 hover:border-white/20 transition-all duration-300 hover:scale-105">
+            <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
+              <Clock className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-xl font-medium text-white mb-4">
+              {t('landing.reason3.title')}
+            </h3>
+            <p className="text-sm text-gray-300">
+              {t('landing.reason3.description')}
+            </p>
+          </div>
+
+          {/* Easy Integration */}
+          <div className="bg-black border border-gray-800 rounded-2xl p-6 sm:p-8 hover:border-white/20 transition-all duration-300 hover:scale-105">
+            <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-6">
+              <Zap className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-xl font-medium text-white mb-4">
+              {t('landing.reason4.title')}
+            </h3>
+            <p className="text-sm text-gray-300">
+              {t('landing.reason4.description')}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 // Demo Access Section
 const DemoAccessSection = () => {
   const { t } = useTranslation()
 
   return (
-    <section className="py-16 bg-black">
+    <section id="demo" className="py-16 bg-black">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-light text-white mb-4 tracking-wide">
@@ -561,11 +759,13 @@ const ModernFooter = () => {
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen w-full bg-black">
+    <div className="min-h-screen w-full bg-black scroll-smooth">
       <ModernHeader />
       <main className="w-full">
         <ModernHeroSection />
         <ModernFeaturesSection />
+        <WhyChooseUsSection />
+        <PricingSection />
         <ModernTestimonialsSection />
         <DemoAccessSection />
         <ModernCTASection />

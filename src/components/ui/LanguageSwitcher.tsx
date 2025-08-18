@@ -28,13 +28,13 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className }) => {
     <div className={cn("relative", className)}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-200"
+        className="flex items-center space-x-1 sm:space-x-1.5 px-2 sm:px-2.5 py-1 sm:py-1.5 text-xs font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300"
       >
-        <Globe className="w-4 h-4" />
-        <span className="text-lg">{currentLanguage.flag}</span>
-        <span className="hidden sm:block">{currentLanguage.name}</span>
+        <Globe className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+        <span className="text-sm">{currentLanguage.flag}</span>
+        <span className="hidden sm:block text-xs">{currentLanguage.code.toUpperCase()}</span>
         <ChevronDown className={cn(
-          "w-4 h-4 transition-transform duration-200",
+          "w-3 h-3 sm:w-3.5 sm:h-3.5 transition-transform duration-200",
           isOpen && "rotate-180"
         )} />
       </button>
@@ -48,21 +48,21 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className }) => {
           />
           
           {/* Dropdown */}
-          <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-20">
+          <div className="absolute right-0 mt-2 w-48 bg-black border border-gray-800 rounded-lg shadow-2xl z-20">
             <div className="py-1">
               {languages.map((language) => (
                 <button
                   key={language.code}
                   onClick={() => handleLanguageChange(language.code)}
                   className={cn(
-                    "w-full flex items-center space-x-3 px-4 py-2 text-sm text-left hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200",
-                    i18n.language === language.code && "bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400"
+                    "w-full flex items-center space-x-3 px-4 py-2 text-sm text-left text-gray-300 hover:text-white hover:bg-white/10 transition-colors duration-200",
+                    i18n.language === language.code && "bg-white/10 text-white"
                   )}
                 >
                   <span className="text-lg">{language.flag}</span>
                   <span>{language.name}</span>
                   {i18n.language === language.code && (
-                    <div className="ml-auto w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full" />
+                    <div className="ml-auto w-2 h-2 bg-white rounded-full" />
                   )}
                 </button>
               ))}
