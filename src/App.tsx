@@ -95,6 +95,8 @@ import MentorshipPage from "@/pages/employee/MentorshipPage";
 import DirectoryPage from "@/pages/employee/DirectoryPage";
 import MessagesPage from "@/pages/employee/MessagesPage";
 import SettingsPage from "@/pages/employee/SettingsPage";
+import FAQPage from "@/pages/employee/FAQPage";
+import WellbeingSurvey from "@/components/ui/WellbeingSurvey";
 
 // Manager Pages
 import TeamOverviewPage from "@/pages/manager/TeamOverviewPage";
@@ -373,6 +375,8 @@ function App() {
             <Route path="mentorship" element={<MentorshipPage />} />
             <Route path="directory" element={<DirectoryPage />} />
             <Route path="messages" element={<MessagesPage />} />
+            <Route path="faq" element={<FAQPage />} />
+            <Route path="wellbeing-survey" element={<WellbeingSurvey />} />
             <Route path="settings" element={<SettingsPage />} />
             {/* Add more employee routes here as needed */}
           </Route>

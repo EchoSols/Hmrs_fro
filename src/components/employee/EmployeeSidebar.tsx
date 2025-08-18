@@ -15,7 +15,9 @@ import {
   Briefcase,
   DollarSign,
   BookOpen,
-  Award
+  Award,
+  HelpCircle,
+  Heart
 } from 'lucide-react'
 
 interface EmployeeSidebarProps {
@@ -114,6 +116,18 @@ const EmployeeSidebar = ({ isOpen, onClose }: EmployeeSidebarProps) => {
       icon: MessageSquare,
       href: '/employee/messages',
       badge: '2'
+    },
+    {
+      name: 'FAQ & Help',
+      icon: HelpCircle,
+      href: '/employee/faq',
+      badge: null
+    },
+    {
+      name: 'Well-being Survey',
+      icon: Heart,
+      href: '/employee/wellbeing-survey',
+      badge: null
     },
     {
       name: 'Settings',

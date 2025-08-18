@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import EmployeeSidebar from '@/components/employee/EmployeeSidebar'
 import EmployeeHeader from '@/components/employee/EmployeeHeader'
+import ChatAssistant from '@/components/ui/ChatAssistant'
 
 const EmployeeLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -21,6 +22,9 @@ const EmployeeLayout = () => {
           <Outlet />
         </main>
       </div>
+
+      {/* AI Chat Assistant */}
+      <ChatAssistant />
     </div>
   )
 }
