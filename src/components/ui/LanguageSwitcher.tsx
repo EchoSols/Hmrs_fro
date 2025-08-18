@@ -12,14 +12,15 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const languages = [
-    { code: 'en', name: t('languages.en'), flag: '🇺🇸' },
-    { code: 'fr', name: t('languages.fr'), flag: '🇫🇷' },
-    { code: 'rw', name: t('languages.rw'), flag: '🇷🇼' }
+    { code: 'en', name: 'English', flag: '🇺🇸' },
+    { code: 'fr', name: 'Français', flag: '🇫🇷' },
+    { code: 'rw', name: 'Kinyarwanda', flag: '🇷🇼' }
   ]
 
   const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0]
 
   const handleLanguageChange = (languageCode: string) => {
+    console.log('Changing language to:', languageCode)
     i18n.changeLanguage(languageCode)
     setIsOpen(false)
   }

@@ -48,7 +48,7 @@ const LoginPage = () => {
       // Simulate successful login
       setSuccess('Login successful! Redirecting...')
       setTimeout(() => {
-        navigate('/dashboard') // You can change this to your dashboard route
+        navigate('/app') // Redirect to main app dashboard
       }, 1000)
     }).catch((err) => {
       setError(err instanceof Error ? err.message : 'Login failed. Please try again.')

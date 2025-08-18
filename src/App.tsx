@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { LoadingProvider } from "@/contexts/LoadingContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import LoadingOverlay from "@/components/LoadingOverlay";
@@ -8,7 +8,7 @@ import LoginPage from "@/pages/LoginPage";
 import TeamMembersPage from "@/pages/TeamMembersPage";
 import MainDashboardPage from "@/pages/DashboardPage";
 import ProtectedRoute from "@/components/auth/ProtectedRoute";
-import "@/i18n";
+import "@/i18n/index";
 
 // Layouts
 import AdminLayout from "@/layouts/AdminLayout";
@@ -299,6 +299,7 @@ function App() {
           {/* Public Routes */}
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/dashboard" element={<Navigate to="/app" replace />} />
           
                                {/* Main App Routes */}
           <Route path="/app" element={
