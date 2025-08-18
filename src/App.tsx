@@ -8,6 +8,7 @@ import LoginPage from "@/pages/LoginPage";
 import TeamMembersPage from "@/pages/TeamMembersPage";
 import MainDashboardPage from "@/pages/DashboardPage";
 import ProtectedRoute from "@/components/auth/ProtectedRoute";
+import NotFoundPage from "@/pages/NotFoundPage";
 import "@/i18n/index";
 
 // Layouts
@@ -742,6 +743,9 @@ function App() {
             <Route path="profile" element={<TrainerProfilePage />} />
             <Route path="settings" element={<TrainerSettingsPage />} />
           </Route>
+
+          {/* 404 Route - Must be last */}
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
     </Router>
