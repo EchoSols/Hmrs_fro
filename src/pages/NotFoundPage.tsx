@@ -1,111 +1,174 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
+import { useTheme } from '@/contexts/ThemeContext'
 import { Link } from 'react-router-dom'
-import { ArrowLeft, Home, Search, AlertTriangle } from 'lucide-react'
+import { Home, ArrowLeft, Search, AlertTriangle } from 'lucide-react'
+import { cn } from '@/lib/utils'
 
-const NotFoundPage = () => {
+const NotFoundPage: React.FC = () => {
+  const { t } = useTranslation()
+  const { theme } = useTheme()
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 flex items-center justify-center p-4">
-      <div className="max-w-2xl w-full text-center">
-        {/* Logo */}
-        <div className="flex items-center justify-center mb-8">
-          <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mr-3">
-            <div className="w-6 h-6 bg-black rounded-sm"></div>
+    <div className={cn(
+      "min-h-screen flex items-center justify-center px-4",
+      theme === 'dark' ? 'bg-gray-950 text-white' : 'bg-gray-50 text-gray-900'
+    )}>
+      <div className="max-w-2xl mx-auto text-center">
+        {/* 404 Icon */}
+        <div className="mb-8">
+          <div className={cn(
+            "w-24 h-24 mx-auto rounded-full flex items-center justify-center mb-6",
+            theme === 'dark' ? 'bg-red-900/20 text-red-400' : 'bg-red-100 text-red-600'
+          )}>
+            <AlertTriangle className="w-12 h-12" />
           </div>
-          <span className="text-2xl font-light text-white tracking-wide">HR Pro</span>
         </div>
 
-        {/* 404 Content */}
-        <div className="bg-gray-900 border border-gray-800 rounded-2xl shadow-2xl p-8 mb-8">
-          {/* 404 Icon */}
-          <div className="w-24 h-24 bg-red-900/20 border border-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-            <AlertTriangle className="w-12 h-12 text-red-400" />
-          </div>
-
-          {/* 404 Text */}
-          <h1 className="text-6xl font-light text-white mb-4 tracking-wide">404</h1>
-          <h2 className="text-2xl font-medium text-white mb-4">Page Not Found</h2>
-          <p className="text-gray-400 mb-8 leading-relaxed max-w-md mx-auto">
+        {/* Main Content */}
+        <div className="mb-12">
+          <h1 className={cn(
+            "text-8xl md:text-9xl font-bold mb-4",
+            theme === 'dark' ? 'text-gray-100' : 'text-gray-900'
+          )}>
+            404
+          </h1>
+          <h2 className={cn(
+            "text-3xl md:text-4xl font-semibold mb-4",
+            theme === 'dark' ? 'text-white' : 'text-gray-800'
+          )}>
+            Page Not Found
+          </h2>
+          <p className={cn(
+            "text-lg md:text-xl mb-8 max-w-md mx-auto",
+            theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+          )}>
             The page you're looking for doesn't exist or has been moved. 
-            Let's get you back on track to managing your HR operations.
+            Let's get you back on track.
           </p>
-
-          {/* Search Suggestion */}
-          <div className="bg-gray-800 border border-gray-700 rounded-lg p-4 mb-8">
-            <div className="flex items-center space-x-3">
-              <Search className="w-5 h-5 text-gray-400" />
-              <span className="text-sm text-gray-300">
-                Try checking the URL or use our navigation menu below
-              </span>
-            </div>
-          </div>
-
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/"
-              className="bg-white text-black hover:bg-gray-100 px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center group"
-            >
-              <Home className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-              Back to Home
-            </Link>
-            <Link
-              to="/login"
-              className="border border-white text-white hover:bg-white hover:text-black px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center group"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-              Sign In
-            </Link>
-          </div>
         </div>
 
-        {/* Quick Links */}
-        <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
-          <h3 className="text-lg font-medium text-white mb-4">Quick Access</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {/* Action Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <Link
+            to="/"
+            className={cn(
+              "inline-flex items-center justify-center px-8 py-4 rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105",
+              theme === 'dark' 
+                ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                : 'bg-blue-600 text-white hover:bg-blue-700'
+            )}
+          >
+            <Home className="w-5 h-5 mr-2" />
+            Go Home
+          </Link>
+          
+          <button
+            onClick={() => window.history.back()}
+            className={cn(
+              "inline-flex items-center justify-center px-8 py-4 rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105 border-2",
+              theme === 'dark'
+                ? 'border-gray-600 text-gray-300 hover:border-gray-500 hover:text-white'
+                : 'border-gray-300 text-gray-700 hover:border-gray-400 hover:text-gray-900'
+            )}
+          >
+            <ArrowLeft className="w-5 h-5 mr-2" />
+            Go Back
+          </button>
+        </div>
+
+        {/* Search Suggestion */}
+        <div className={cn(
+          "p-6 rounded-xl border",
+          theme === 'dark' ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'
+        )}>
+          <div className="flex items-center justify-center mb-4">
+            <Search className={cn(
+              "w-6 h-6 mr-2",
+              theme === 'dark' ? 'text-gray-400' : 'text-gray-500'
+            )} />
+            <h3 className={cn(
+              "text-lg font-medium",
+              theme === 'dark' ? 'text-white' : 'text-gray-800'
+            )}>
+              Can't find what you're looking for?
+            </h3>
+          </div>
+          <p className={cn(
+            "text-base mb-4",
+            theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+          )}>
+            Try searching for it or check out our main sections:
+          </p>
+          
+          {/* Quick Links */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link
               to="/admin"
-              className="bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-gray-600 rounded-lg p-3 text-sm text-gray-300 hover:text-white transition-all duration-300"
+              className={cn(
+                "p-3 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105",
+                theme === 'dark' 
+                  ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white' 
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-gray-900'
+              )}
             >
-              Administrator Portal
+              Admin Portal
             </Link>
             <Link
               to="/employee"
-              className="bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-gray-600 rounded-lg p-3 text-sm text-gray-300 hover:text-white transition-all duration-300"
+              className={cn(
+                "p-3 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105",
+                theme === 'dark' 
+                  ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white' 
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-gray-900'
+              )}
             >
               Employee Portal
             </Link>
             <Link
               to="/hr"
-              className="bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-gray-600 rounded-lg p-3 text-sm text-gray-300 hover:text-white transition-all duration-300"
+              className={cn(
+                "p-3 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105",
+                theme === 'dark' 
+                  ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white' 
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-gray-900'
+              )}
             >
-              HR Manager Portal
+              HR Portal
             </Link>
             <Link
               to="/manager"
-              className="bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-gray-600 rounded-lg p-3 text-sm text-gray-300 hover:text-white transition-all duration-300"
+              className={cn(
+                "p-3 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105",
+                theme === 'dark' 
+                  ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white' 
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-gray-900'
+              )}
             >
               Manager Portal
-            </Link>
-            <Link
-              to="/trainer"
-              className="bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-gray-600 rounded-lg p-3 text-sm text-gray-300 hover:text-white transition-all duration-300"
-            >
-              Trainer Portal
-            </Link>
-            <Link
-              to="/auditor"
-              className="bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-gray-600 rounded-lg p-3 text-sm text-gray-300 hover:text-white transition-all duration-300"
-            >
-              Auditor Portal
             </Link>
           </div>
         </div>
 
         {/* Footer */}
-        <div className="mt-8 text-center text-gray-500 text-sm">
-          <p>© 2024 HR Pro. All rights reserved.</p>
-          <p className="mt-2">
-            Need help? <a href="mailto:support@hrpro.com" className="text-gray-400 hover:text-white transition-colors">Contact Support</a>
+        <div className={cn(
+          "mt-12 pt-8 border-t",
+          theme === 'dark' ? 'border-gray-800' : 'border-gray-200'
+        )}>
+          <p className={cn(
+            "text-sm",
+            theme === 'dark' ? 'text-gray-500' : 'text-gray-400'
+          )}>
+            Need help? Contact our support team at{' '}
+            <a 
+              href="mailto:echhosolutions@yahoo.com"
+              className={cn(
+                "underline hover:no-underline transition-all duration-300",
+                theme === 'dark' ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-500'
+              )}
+            >
+              echhosolutions@yahoo.com
+            </a>
           </p>
         </div>
       </div>

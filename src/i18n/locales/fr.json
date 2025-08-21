@@ -339,6 +339,12 @@
         "description": "Surveillance de la conformité, pistes d'audit, évaluation des risques et rapports réglementaires.",
         "button": "Accéder à la démo Auditeur →"
       }
+    },
+    "contactInfo": {
+      "email": "echhosolutions@yahoo.com",
+      "phone": "+250 793373953",
+      "address": "Kigali, Rwanda",
+      "businessHours": "Lun-Ven: 8h00 - 18h00 CAT"
     }
   }
 }

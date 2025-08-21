@@ -339,6 +339,12 @@
         "description": "Compliance monitoring, audit trails, risk assessment, and regulatory reporting.",
         "button": "Access Auditor Demo →"
       }
+    },
+    "contactInfo": {
+      "email": "echhosolutions@yahoo.com",
+      "phone": "+250 793373953",
+      "address": "Kigali, Rwanda",
+      "businessHours": "Mon-Fri: 8:00 AM - 6:00 PM CAT"
     }
   }
 }
