@@ -12,7 +12,7 @@ const LoadingOverlay: React.FC = () => {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center space-y-6">
           <div className="animate-pulse">
-            <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-gray-600 to-gray-700 rounded-lg mx-auto mb-4 flex items-center justify-center">
               <div className="w-8 h-8 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
             </div>
             <div className="h-6 bg-gray-200 rounded w-32 mx-auto mb-2"></div>

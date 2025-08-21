@@ -61,14 +61,11 @@ const LoginPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-black flex items-center justify-center p-4">
       <div className="max-w-md w-full">
         {/* Back to Home */}
-        <Link 
-          to="/" 
-          className="inline-flex items-center text-gray-300 hover:text-white mb-8 transition-colors duration-200"
-        >
-          <ArrowLeft size={20} className="mr-2" />
+        <Link to="/" className="inline-flex items-center text-gray-300 hover:text-white mb-8">
+          <ArrowLeft className="w-4 h-4 mr-2" />
           Back to Home
         </Link>
 

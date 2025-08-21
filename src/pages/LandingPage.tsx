@@ -97,7 +97,7 @@ const ModernHeroSection = () => {
   const { t } = useTranslation()
 
   return (
-    <section className="min-h-screen w-full bg-gradient-to-br from-gray-900 via-black to-gray-800 flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen w-full bg-black flex items-center justify-center relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]"></div>
@@ -682,7 +682,7 @@ const ModernCTASection = () => {
   const { t } = useTranslation()
 
   return (
-    <section className="py-20 bg-gradient-to-r from-gray-900 via-black to-gray-800">
+    <section className="py-20 bg-black">
       <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-light text-white mb-6 tracking-wide">
           {t('landing.ctaTitle')}
