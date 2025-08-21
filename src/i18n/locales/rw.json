@@ -187,6 +187,8 @@
     "heroSubtitle": "Koroshya ubwishingizi, gucunga amashuri, kurikirana ibikorwa, kandi wizigire ko ufata amabwiriza ukoresheje urubuga rwacu rwuzuye rwo gucunga umukozi.",
     "startFreeTrial": "Tangira kugenzura kubuntu",
     "watchDemo": "Reba demo",
+    "tryHRProTitle": "Gerageza HR Pro Uyu Munsi",
+    "tryHRProSubtitle": "Menya ingufu zo gucunga umukozi z'ubwenge. Shobora demo yacu ukoresheje amabwiriza atandukanye yo kumenya uko HR Pro ihindura aho ukora.",
     "featuresTitle": "Ibintu byose ukeneye kugucunga abakozi bawe",
     "featuresSubtitle": "Ibikoresho by'ingufu byateguwe kugira ngo koroshye ibikorwa byawe by'umukozi kandi byongere ubworozi mu ishyirahamwe ryawe.",
     "feature1": {
@@ -232,6 +234,111 @@
     "footerCompany": "Ishyirahamwe",
     "about": "Ibyerekeye",
     "privacy": "Ibanga",
-    "allRightsReserved": "Amabwiriza yose yarangiwe."
+    "allRightsReserved": "Amabwiriza yose yarangiwe.",
+    "pricingTitle": "Amadolari yoroshye kandi y'umutekano",
+    "pricingSubtitle": "Hitamo gahunda ihagije kugira ngo ihagije ibikenewe by'ishyirahamwe ryawe",
+    "freeTrial": "Kugenzura kubuntu",
+    "perMonth": "ku kwezi",
+    "perYear": "ku mwaka",
+    "startFreeTrial": "Tangira kugenzura kubuntu",
+    "contactSales": "Twandikire abohereza",
+    "mostPopular": "Byakomeye",
+    "basicPlan": {
+      "name": "Ibikenewe",
+      "price": "29",
+      "description": "Byihuse kugira ngo amatsinda mato batangire",
+      "features": [
+        "Kugeza kuri abakozi 50",
+        "Gucunga umukozi ibikenewe",
+        "Kurikirana igihe",
+        "Iraporo ibikenewe",
+        "Gufasha email"
+      ]
+    },
+    "professionalPlan": {
+      "name": "Umwuga",
+      "price": "79",
+      "description": "Byihuse kugira ngo ishyirahamwe rikura",
+      "features": [
+        "Kugeza kuri abakozi 200",
+        "Gucunga umukozi inyongera",
+        "Kurikirana ibikorwa",
+        "Analytics inyongera",
+        "Gufasha ibikenewe",
+        "Guhuzwa ibikenewe"
+      ]
+    },
+    "enterprisePlan": {
+      "name": "Ishyirahamwe",
+      "price": "199",
+      "description": "Kugira ngo ishyirahamwe rinini rufite ibikenewe by'inyongera",
+      "features": [
+        "Abakozi benshi",
+        "Suite y'umukozi yuzuye",
+        "Ubumenyi bw'ubwenge",
+        "Ibikorwa ibikenewe",
+        "Gufasha byihuse",
+        "Umutekano inyongera",
+        "Ibikoresho by'ibara"
+      ]
+    },
+    "whyChooseUs": "Kuki dutora HR Pro?",
+    "whyChooseSubtitle": "Menya ibintu bidufasha kuba icyo gisubizo cyo gucunga umukozi",
+    "reason1": {
+      "title": "Ubwenge bw'ubwenge",
+      "description": "Koresha ubwenge bw'ubwenge kugira ngo koroshye ibikorwa by'inyongera kandi ubone ubumenyi bw'ibizaza"
+    },
+    "reason2": {
+      "title": "Umutekano w'ishyirahamwe",
+      "description": "Umutekano w'ubwoko bw'ububiko hamwe n'ubujya kumurongo SOC 2 kandi kwibanga byose"
+    },
+    "reason3": {
+      "title": "Gufasha 24/7",
+      "description": "Gufasha 24h/24 kandi 7j/7 kuva ku ishyirahamwe ryawe rya nyuma kugira ngo wizigire intsinzi"
+    },
+    "reason4": {
+      "title": "Guhuzwa byoroshye",
+      "description": "Shyiramo neza mu bikoresho byawe byo vuba kandi ibikorwa by'umukozi"
+    },
+    "demoAccessTitle": "Shakisha urubuga rwacu",
+    "demoAccessSubtitle": "Menya ingufu za HR Pro ukoresheje demo zacu z'inyongera",
+    "adminDemo": "Ikibaho cy'umuyobozi",
+    "employeeDemo": "Urubuga rw'umukozi",
+    "hrDemo": "Gucunga umukozi",
+    "managerDemo": "Ibikoresho by'umuyobozi",
+    "trainerDemo": "Urubuga rwo kwigisha",
+    "auditorDemo": "Gusuzuma n'ubujya kumurongo",
+    "roleCards": {
+      "administrator": {
+        "title": "Umyobozi",
+        "description": "Gucunga sisitemu yose, gucunga umukozi, kandi analytics yuzuye.",
+        "button": "Shobora Demo y'Umyobozi →"
+      },
+      "employee": {
+        "title": "Umukozi",
+        "description": "Urubuga rwo kwifashisha, kurikirana igihe, gucunga uburenganzira, kandi ikibaho cyawe.",
+        "button": "Shobora Demo y'Umukozi →"
+      },
+      "hrManager": {
+        "title": "Umyobozi w'Umukozi",
+        "description": "Ubwishingizi, gucunga ibikorwa, kujya kumurongo, kandi analytics y'umukozi.",
+        "button": "Shobora Demo y'Umukozi →"
+      },
+      "manager": {
+        "title": "Umyobozi",
+        "description": "Gucunga itsinda, gusuzuma ibikorwa, kurikirana ibikorwa, kandi gutanga ibikoresho.",
+        "button": "Shobora Demo y'Umyobozi →"
+      },
+      "trainer": {
+        "title": "Umwigisha",
+        "description": "Gucunga amasomo, inzira zo kwiga, gusuzuma, kandi analytics y'uburezi.",
+        "button": "Shobora Demo y'Umwigisha →"
+      },
+      "auditor": {
+        "title": "Umusuzi",
+        "description": "Kurikirana kujya kumurongo, inzira z'ubushakashatsi, gusuzuma ibibazo, kandi raporo y'amabwiriza.",
+        "button": "Shobora Demo y'Umusuzi →"
+      }
+    }
   }
 }

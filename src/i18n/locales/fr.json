@@ -187,6 +187,8 @@
     "heroSubtitle": "Automatisez le recrutement, gérez la paie, suivez les performances et assurez la conformité avec notre plateforme de gestion RH complète.",
     "startFreeTrial": "Essai gratuit",
     "watchDemo": "Voir la démo",
+    "tryHRProTitle": "Essayez HR Pro Aujourd'hui",
+    "tryHRProSubtitle": "Découvrez la puissance de la gestion RH alimentée par l'IA. Accédez à notre démo avec différents rôles utilisateur pour voir comment HR Pro transforme votre lieu de travail.",
     "featuresTitle": "Tout ce dont vous avez besoin pour gérer votre main-d'œuvre",
     "featuresSubtitle": "Outils puissants conçus pour rationaliser vos processus RH et stimuler la productivité dans votre organisation.",
     "feature1": {
@@ -305,6 +307,38 @@
     "hrDemo": "Gestion RH",
     "managerDemo": "Outils de gestionnaire",
     "trainerDemo": "Plateforme de formation",
-    "auditorDemo": "Audit et conformité"
+    "auditorDemo": "Audit et conformité",
+    "roleCards": {
+      "administrator": {
+        "title": "Administrateur",
+        "description": "Contrôle complet du système, gestion des employés et analyses complètes.",
+        "button": "Accéder à la démo Admin →"
+      },
+      "employee": {
+        "title": "Employé",
+        "description": "Portail libre-service, suivi du temps, gestion des congés et tableau de bord personnel.",
+        "button": "Accéder à la démo Employé →"
+      },
+      "hrManager": {
+        "title": "Gestionnaire RH",
+        "description": "Recrutement, gestion des performances, conformité et analyses de la main-d'œuvre.",
+        "button": "Accéder à la démo RH →"
+      },
+      "manager": {
+        "title": "Gestionnaire",
+        "description": "Gestion d'équipe, évaluations de performance, suivi de projet et allocation des ressources.",
+        "button": "Accéder à la démo Gestionnaire →"
+      },
+      "trainer": {
+        "title": "Formateur",
+        "description": "Gestion des cours, parcours d'apprentissage, évaluations et analyses de formation.",
+        "button": "Accéder à la démo Formateur →"
+      },
+      "auditor": {
+        "title": "Auditeur",
+        "description": "Surveillance de la conformité, pistes d'audit, évaluation des risques et rapports réglementaires.",
+        "button": "Accéder à la démo Auditeur →"
+      }
+    }
   }
 }

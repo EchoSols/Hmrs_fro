@@ -546,10 +546,10 @@ const DemoAccessSection = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-light text-white mb-4 tracking-wide">
-            Try HR Pro Today
+            {t('landing.tryHRProTitle')}
           </h2>
           <p className="text-sm text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Experience the power of AI-driven HR management. Access our demo with different user roles to see how HR Pro transforms your workplace.
+            {t('landing.tryHRProSubtitle')}
           </p>
         </div>
 
@@ -561,15 +561,15 @@ const DemoAccessSection = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
             </div>
-            <h3 className="text-lg font-medium text-white mb-2">Administrator</h3>
+            <h3 className="text-lg font-medium text-white mb-2">{t('landing.roleCards.administrator.title')}</h3>
             <p className="text-gray-400 mb-4 text-xs leading-relaxed">
-              Full system control, employee management, and comprehensive analytics.
+              {t('landing.roleCards.administrator.description')}
             </p>
             <a
               href="/admin"
               className="inline-flex items-center justify-center w-full bg-white text-black hover:bg-gray-100 px-3 py-2 rounded-lg font-medium text-xs transition-all duration-300 group-hover:scale-105"
             >
-              Access Admin Demo
+              {t('landing.roleCards.administrator.button')}
               <ArrowRight className="w-3.5 h-3.5 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
@@ -579,15 +579,15 @@ const DemoAccessSection = () => {
             <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">
               <Users className="w-5 h-5 text-white" />
             </div>
-            <h3 className="text-lg font-medium text-white mb-2">Employee</h3>
+            <h3 className="text-lg font-medium text-white mb-2">{t('landing.roleCards.employee.title')}</h3>
             <p className="text-gray-400 mb-4 text-xs leading-relaxed">
-              Self-service portal, time tracking, leave management, and personal dashboard.
+              {t('landing.roleCards.employee.description')}
             </p>
             <a
               href="/employee"
               className="inline-flex items-center justify-center w-full bg-white text-black hover:bg-gray-100 px-3 py-2 rounded-lg font-medium text-xs transition-all duration-300 group-hover:scale-105"
             >
-              Access Employee Demo
+              {t('landing.roleCards.employee.button')}
               <ArrowRight className="w-3.5 h-3.5 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
@@ -599,15 +599,15 @@ const DemoAccessSection = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
             </div>
-            <h3 className="text-lg font-medium text-white mb-2">HR Manager</h3>
+            <h3 className="text-lg font-medium text-white mb-2">{t('landing.roleCards.hrManager.title')}</h3>
             <p className="text-gray-400 mb-4 text-xs leading-relaxed">
-              Recruitment, performance management, compliance, and workforce analytics.
+              {t('landing.roleCards.hrManager.description')}
             </p>
             <a
               href="/hr"
               className="inline-flex items-center justify-center w-full bg-white text-black hover:bg-gray-100 px-3 py-2 rounded-lg font-medium text-xs transition-all duration-300 group-hover:scale-105"
             >
-              Access HR Demo
+              {t('landing.roleCards.hrManager.button')}
               <ArrowRight className="w-3.5 h-3.5 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
@@ -619,15 +619,15 @@ const DemoAccessSection = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
               </svg>
             </div>
-            <h3 className="text-lg font-medium text-white mb-2">Manager</h3>
+            <h3 className="text-lg font-medium text-white mb-2">{t('landing.roleCards.manager.title')}</h3>
             <p className="text-gray-400 mb-4 text-xs leading-relaxed">
-              Team management, performance reviews, project tracking, and resource allocation.
+              {t('landing.roleCards.manager.description')}
             </p>
             <a
               href="/manager"
               className="inline-flex items-center justify-center w-full bg-white text-black hover:bg-gray-100 px-3 py-2 rounded-lg font-medium text-xs transition-all duration-300 group-hover:scale-105"
             >
-              Access Manager Demo
+              {t('landing.roleCards.manager.button')}
               <ArrowRight className="w-3.5 h-3.5 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
@@ -639,15 +639,15 @@ const DemoAccessSection = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
             </div>
-            <h3 className="text-lg font-medium text-white mb-2">Trainer</h3>
+            <h3 className="text-lg font-medium text-white mb-2">{t('landing.roleCards.trainer.title')}</h3>
             <p className="text-gray-400 mb-4 text-xs leading-relaxed">
-              Course management, learning paths, assessments, and training analytics.
+              {t('landing.roleCards.trainer.description')}
             </p>
             <a
               href="/trainer"
               className="inline-flex items-center justify-center w-full bg-white text-black hover:bg-gray-100 px-3 py-2 rounded-lg font-medium text-xs transition-all duration-300 group-hover:scale-105"
             >
-              Access Trainer Demo
+              {t('landing.roleCards.trainer.button')}
               <ArrowRight className="w-3.5 h-3.5 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
@@ -659,15 +659,15 @@ const DemoAccessSection = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
             </div>
-            <h3 className="text-lg font-medium text-white mb-2">Auditor</h3>
+            <h3 className="text-lg font-medium text-white mb-2">{t('landing.roleCards.auditor.title')}</h3>
             <p className="text-gray-400 mb-4 text-xs leading-relaxed">
-              Compliance monitoring, audit trails, risk assessment, and regulatory reporting.
+              {t('landing.roleCards.auditor.description')}
             </p>
             <a
               href="/auditor"
               className="inline-flex items-center justify-center w-full bg-white text-black hover:bg-gray-100 px-3 py-2 rounded-lg font-medium text-xs transition-all duration-300 group-hover:scale-105"
             >
-              Access Auditor Demo
+              {t('landing.roleCards.auditor.button')}
               <ArrowRight className="w-3.5 h-3.5 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
