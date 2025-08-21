@@ -218,7 +218,7 @@ const ModernFeaturesSection = () => {
 
   const getColorClasses = (color: string) => {
     const colors = {
-      blue: 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400',
+      blue: 'bg-gray-50 dark:bg-gray-900/20 text-gray-600 dark:text-gray-400',
       green: 'bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400',
       purple: 'bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400',
       orange: 'bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400',
@@ -482,7 +482,7 @@ const WhyChooseUsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
           {/* AI-Powered Automation */}
           <div className="bg-black border border-gray-800 rounded-2xl p-6 sm:p-8 hover:border-white/20 transition-all duration-300 hover:scale-105">
-            <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
+            <div className="w-12 h-12 bg-gray-600 rounded-lg flex items-center justify-center mb-6">
               <Brain className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-xl font-medium text-white mb-4">
