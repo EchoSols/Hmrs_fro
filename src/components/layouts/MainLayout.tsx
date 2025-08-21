@@ -7,7 +7,7 @@ const MainLayout: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 w-full">
       {/* Sidebar */}
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       
@@ -17,7 +17,7 @@ const MainLayout: React.FC = () => {
         <Header onMenuClick={() => setSidebarOpen(true)} />
         
         {/* Page Content */}
-        <main className="p-6">
+        <main className="p-6 bg-gray-50 dark:bg-gray-950 min-h-screen">
           <Outlet />
         </main>
       </div>
