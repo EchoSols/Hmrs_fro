@@ -288,6 +288,7 @@ import PredictionsPage from "@/pages/trainer/PredictionsPage";
 import ForumsPage from "@/pages/trainer/ForumsPage";
 import TrainerFeedbackPage from "@/pages/trainer/FeedbackPage";
 import TrainerMessagesPage from "@/pages/trainer/MessagesPage";
+import CertificationProgramsPage from "@/pages/trainer/CertificationProgramsPage";
 
 function App() {
   return (
