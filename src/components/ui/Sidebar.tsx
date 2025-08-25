@@ -47,7 +47,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const recentProjects = [
     { name: t('navigation.insideAppDesign'), color: 'bg-orange-500' },
     { name: t('navigation.salesatticsCrmDesign'), color: 'bg-blue-500' },
-    { name: t('navigation.internalProjects'), color: 'bg-purple-500' }
+            { name: t('navigation.internalProjects'), color: 'bg-blue-500' }
   ]
 
   const toggleMenu = (menuName: string) => {

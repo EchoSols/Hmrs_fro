@@ -294,7 +294,7 @@ function App() {
     <ThemeProvider>
       <LoadingProvider>
         <Router>
-          <div className="App min-h-screen bg-gray-50 dark:bg-gray-950">
+          <div className="App min-h-screen w-full bg-transparent">
             <LoadingOverlay />
                   <Routes>
           {/* Public Routes */}

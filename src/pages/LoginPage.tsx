@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Eye, EyeOff, Mail, Lock, ArrowLeft, AlertCircle, CheckCircle } from 'lucide-react'
 import { useLoadingState } from '@/hooks/useLoadingState'
+import GlobalBackground from '@/components/GlobalBackground'
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({
@@ -61,8 +62,9 @@ const LoginPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center p-4">
-      <div className="max-w-md w-full">
+    <div className="min-h-screen flex items-center justify-center p-4 relative">
+      <GlobalBackground />
+      <div className="max-w-md w-full relative z-10">
         {/* Back to Home */}
         <Link to="/" className="inline-flex items-center text-gray-300 hover:text-white mb-8">
           <ArrowLeft className="w-4 h-4 mr-2" />
