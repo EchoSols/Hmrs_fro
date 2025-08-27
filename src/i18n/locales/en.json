@@ -1,0 +1,350 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "refresh": "Refresh",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "open": "Open",
+    "yes": "Yes",
+    "no": "No",
+    "confirm": "Confirm",
+    "actions": "Actions",
+    "status": "Status",
+    "active": "Active",
+    "inactive": "Inactive",
+    "pending": "Pending",
+    "completed": "Completed",
+    "overdue": "Overdue"
+  },
+  "navigation": {
+    "menu": "Menu",
+    "dashboard": "Dashboard",
+    "overview": "Overview",
+    "myTasks": "My Tasks",
+    "activities": "Activities",
+    "messages": "Messages",
+    "teamMembers": "Team Members",
+    "calendar": "Calendar",
+    "recentProjects": "Recent Project",
+    "insideAppDesign": "Inside App Design",
+    "salesatticsCrmDesign": "Salesattics CRM Design",
+    "internalProjects": "Internal Projects"
+  },
+  "teamMembers": {
+    "title": "Team Members",
+    "addTeamMember": "Add team member",
+    "searchPlaceholder": "Search",
+    "name": "Name",
+    "emailAddress": "Email address",
+    "teams": "Teams",
+    "status": "Status",
+    "offline": "Offline",
+    "selectAll": "Select All",
+    "noMembersFound": "No team members found",
+    "memberAdded": "Team member added successfully",
+    "memberUpdated": "Team member updated successfully",
+    "memberDeleted": "Team member deleted successfully"
+  },
+  "header": {
+    "searchPlaceholder": "What are you looking for?",
+    "themeToggle": "Toggle theme",
+    "userProfile": "User profile"
+  },
+  "sidebar": {
+    "companyName": "Product Co.",
+    "brandName": "dash"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot Password?",
+    "rememberMe": "Remember me",
+    "dontHaveAccount": "Don't have an account?",
+    "alreadyHaveAccount": "Already have an account?",
+    "loginSuccess": "Login successful!",
+    "loginError": "Login failed. Please try again.",
+    "invalidEmail": "Please enter a valid email address",
+    "passwordRequired": "Password is required",
+    "emailRequired": "Email is required"
+  },
+  "dashboard": {
+    "welcome": "Welcome back!",
+    "subtitle": "Here's what's happening with your HR operations.",
+    "totalEmployees": "Total Employees",
+    "activeProjects": "Active Projects",
+    "pendingTasks": "Pending Tasks",
+    "completedTasks": "Completed Tasks",
+    "recentActivity": "Recent Activity",
+    "quickActions": "Quick Actions",
+    "viewAll": "View All"
+  },
+  "tasks": {
+    "title": "Tasks",
+    "myTasks": "My Tasks",
+    "allTasks": "All Tasks",
+    "createTask": "Create Task",
+    "taskTitle": "Task Title",
+    "description": "Description",
+    "priority": "Priority",
+    "dueDate": "Due Date",
+    "assignedTo": "Assigned To",
+    "status": "Status",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low",
+    "todo": "To Do",
+    "inProgress": "In Progress",
+    "review": "Review",
+    "done": "Done"
+  },
+  "activities": {
+    "title": "Activities",
+    "recentActivities": "Recent Activities",
+    "noActivities": "No recent activities",
+    "activityType": "Activity Type",
+    "timestamp": "Timestamp",
+    "user": "User",
+    "description": "Description"
+  },
+  "messages": {
+    "title": "Messages",
+    "inbox": "Inbox",
+    "sent": "Sent",
+    "compose": "Compose",
+    "newMessage": "New Message",
+    "to": "To",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send",
+    "reply": "Reply",
+    "forward": "Forward",
+    "markAsRead": "Mark as Read",
+    "markAsUnread": "Mark as Unread",
+    "deleteMessage": "Delete Message"
+  },
+  "calendar": {
+    "title": "Calendar",
+    "today": "Today",
+    "month": "Month",
+    "week": "Week",
+    "day": "Day",
+    "agenda": "Agenda",
+    "addEvent": "Add Event",
+    "eventTitle": "Event Title",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "allDay": "All Day",
+    "location": "Location",
+    "description": "Description",
+    "saveEvent": "Save Event",
+    "deleteEvent": "Delete Event"
+  },
+  "settings": {
+    "title": "Settings",
+    "profile": "Profile",
+    "account": "Account",
+    "notifications": "Notifications",
+    "privacy": "Privacy",
+    "security": "Security",
+    "language": "Language",
+    "theme": "Theme",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "systemDefault": "System Default",
+    "saveChanges": "Save Changes",
+    "resetToDefault": "Reset to Default"
+  },
+  "languages": {
+    "en": "English",
+    "fr": "Français",
+    "rw": "Kinyarwanda"
+  },
+  "landing": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "reviews": "Reviews",
+    "contact": "Contact",
+    "signIn": "Sign In",
+    "getStarted": "Get Started",
+    "heroTitle": "Streamline Your HR Operations with AI-Powered Solutions",
+    "heroSubtitle": "Automate recruitment, manage payroll, track performance, and ensure compliance with our comprehensive HR management platform.",
+    "startFreeTrial": "Start Free Trial",
+    "watchDemo": "Watch Demo",
+    "tryHRProTitle": "Try HR Pro Today",
+    "tryHRProSubtitle": "Experience the power of AI-driven HR management. Access our demo with different user roles to see how HR Pro transforms your workplace.",
+    "featuresTitle": "Everything you need to manage your workforce",
+    "featuresSubtitle": "Powerful tools designed to streamline your HR processes and boost productivity across your organization.",
+    "feature1": {
+      "title": "Employee Management",
+      "description": "Comprehensive employee profiles, onboarding, and lifecycle management with advanced search and filtering."
+    },
+    "feature2": {
+      "title": "Performance Tracking",
+      "description": "Set goals, track progress, and conduct performance reviews with automated reminders and analytics."
+    },
+    "feature3": {
+      "title": "Compliance & Security",
+      "description": "Ensure regulatory compliance with automated reporting, audit trails, and secure data management."
+    },
+    "feature4": {
+      "title": "Time & Attendance",
+      "description": "Track work hours, manage schedules, and handle leave requests with intelligent automation."
+    },
+    "feature5": {
+      "title": "Analytics & Reporting",
+      "description": "Get insights into workforce trends, productivity metrics, and performance analytics with customizable dashboards."
+    },
+    "feature6": {
+      "title": "AI-Powered Insights",
+      "description": "Leverage artificial intelligence for predictive analytics, talent recommendations, and automated workflows."
+    },
+    "testimonialsTitle": "Trusted by HR professionals worldwide",
+    "testimonialsSubtitle": "See what our customers say about HR Pro",
+    "testimonial1": {
+      "content": "HR Pro has transformed how we manage our workforce. The automation features save us hours every week."
+    },
+    "testimonial2": {
+      "content": "The analytics and reporting capabilities give us insights we never had before. Highly recommended!"
+    },
+    "testimonial3": {
+      "content": "Implementation was smooth and the support team is exceptional. Our HR processes are now 10x more efficient."
+    },
+    "ctaTitle": "Ready to transform your HR operations?",
+    "ctaSubtitle": "Join thousands of companies already using HR Pro to streamline their workforce management.",
+    "contactUs": "Contact Us",
+    "footerDescription": "Modern HR management platform designed to streamline workforce operations and boost productivity.",
+    "footerProduct": "Product",
+    "footerCompany": "Company",
+    "about": "About",
+    "privacy": "Privacy",
+    "allRightsReserved": "All rights reserved.",
+    "pricingTitle": "Simple, transparent pricing",
+    "pricingSubtitle": "Choose the plan that fits your organization's needs",
+    "freeTrial": "Free Trial",
+    "perMonth": "per month",
+    "perYear": "per year",
+    "startFreeTrial": "Start Free Trial",
+    "contactSales": "Contact Sales",
+    "mostPopular": "Most Popular",
+    "basicPlan": {
+      "name": "Basic",
+      "price": "29",
+      "description": "Perfect for small teams getting started",
+      "features": [
+        "Up to 50 employees",
+        "Basic employee management",
+        "Time tracking",
+        "Basic reporting",
+        "Email support"
+      ]
+    },
+    "professionalPlan": {
+      "name": "Professional",
+      "price": "79",
+      "description": "Ideal for growing organizations",
+      "features": [
+        "Up to 200 employees",
+        "Advanced employee management",
+        "Performance tracking",
+        "Advanced analytics",
+        "Priority support",
+        "Custom integrations"
+      ]
+    },
+    "enterprisePlan": {
+      "name": "Enterprise",
+      "price": "199",
+      "description": "For large organizations with complex needs",
+      "features": [
+        "Unlimited employees",
+        "Full HR suite",
+        "AI-powered insights",
+        "Custom workflows",
+        "Dedicated support",
+        "Advanced security",
+        "White-label options"
+      ]
+    },
+    "whyChooseUs": "Why Choose HR Pro?",
+    "whyChooseSubtitle": "Discover what makes us the leading HR management solution",
+    "reason1": {
+      "title": "AI-Powered Automation",
+      "description": "Leverage artificial intelligence to automate repetitive tasks and gain predictive insights"
+    },
+    "reason2": {
+      "title": "Enterprise Security",
+      "description": "Bank-level security with SOC 2 compliance and end-to-end encryption"
+    },
+    "reason3": {
+      "title": "24/7 Support",
+      "description": "Round-the-clock support from our expert team to ensure your success"
+    },
+    "reason4": {
+      "title": "Easy Integration",
+      "description": "Seamlessly integrate with your existing tools and workflows"
+    },
+    "demoAccessTitle": "Explore Our Platform",
+    "demoAccessSubtitle": "Experience the power of HR Pro with our interactive demos",
+    "adminDemo": "Administrator Dashboard",
+    "employeeDemo": "Employee Portal",
+    "hrDemo": "HR Management",
+    "managerDemo": "Manager Tools",
+    "trainerDemo": "Training Platform",
+    "auditorDemo": "Audit & Compliance",
+    "roleCards": {
+      "administrator": {
+        "title": "Administrator",
+        "description": "Full system control, employee management, and comprehensive analytics.",
+        "button": "Access Admin Demo →"
+      },
+      "employee": {
+        "title": "Employee",
+        "description": "Self-service portal, time tracking, leave management, and personal dashboard.",
+        "button": "Access Employee Demo →"
+      },
+      "hrManager": {
+        "title": "HR Manager",
+        "description": "Recruitment, performance management, compliance, and workforce analytics.",
+        "button": "Access HR Demo →"
+      },
+      "manager": {
+        "title": "Manager",
+        "description": "Team management, performance reviews, project tracking, and resource allocation.",
+        "button": "Access Manager Demo →"
+      },
+      "trainer": {
+        "title": "Trainer",
+        "description": "Course management, learning paths, assessments, and training analytics.",
+        "button": "Access Trainer Demo →"
+      },
+      "auditor": {
+        "title": "Auditor",
+        "description": "Compliance monitoring, audit trails, risk assessment, and regulatory reporting.",
+        "button": "Access Auditor Demo →"
+      }
+    },
+    "contactInfo": {
+      "email": "echhosolutions@yahoo.com",
+      "phone": "+250 793373953",
+      "address": "Kigali, Rwanda",
+      "businessHours": "Mon-Fri: 8:00 AM - 6:00 PM CAT"
+    }
+  }
+}

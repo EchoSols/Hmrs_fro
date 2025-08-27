@@ -1,0 +1,350 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "add": "Ajouter",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "sort": "Trier",
+    "refresh": "Actualiser",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "close": "Fermer",
+    "open": "Ouvrir",
+    "yes": "Oui",
+    "no": "Non",
+    "confirm": "Confirmer",
+    "actions": "Actions",
+    "status": "Statut",
+    "active": "Actif",
+    "inactive": "Inactif",
+    "pending": "En attente",
+    "completed": "Terminé",
+    "overdue": "En retard"
+  },
+  "navigation": {
+    "menu": "Menu",
+    "dashboard": "Tableau de bord",
+    "overview": "Aperçu",
+    "myTasks": "Mes tâches",
+    "activities": "Activités",
+    "messages": "Messages",
+    "teamMembers": "Membres de l'équipe",
+    "calendar": "Calendrier",
+    "recentProjects": "Projet récent",
+    "insideAppDesign": "Conception d'application interne",
+    "salesatticsCrmDesign": "Conception CRM Salesattics",
+    "internalProjects": "Projets internes"
+  },
+  "teamMembers": {
+    "title": "Membres de l'équipe",
+    "addTeamMember": "Ajouter un membre d'équipe",
+    "searchPlaceholder": "Rechercher",
+    "name": "Nom",
+    "emailAddress": "Adresse e-mail",
+    "teams": "Équipes",
+    "status": "Statut",
+    "offline": "Hors ligne",
+    "selectAll": "Tout sélectionner",
+    "noMembersFound": "Aucun membre d'équipe trouvé",
+    "memberAdded": "Membre d'équipe ajouté avec succès",
+    "memberUpdated": "Membre d'équipe mis à jour avec succès",
+    "memberDeleted": "Membre d'équipe supprimé avec succès"
+  },
+  "header": {
+    "searchPlaceholder": "Que cherchez-vous ?",
+    "themeToggle": "Basculer le thème",
+    "userProfile": "Profil utilisateur"
+  },
+  "sidebar": {
+    "companyName": "Product Co.",
+    "brandName": "dash"
+  },
+  "auth": {
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "signIn": "Se connecter",
+    "signUp": "S'inscrire",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "forgotPassword": "Mot de passe oublié ?",
+    "rememberMe": "Se souvenir de moi",
+    "dontHaveAccount": "Vous n'avez pas de compte ?",
+    "alreadyHaveAccount": "Vous avez déjà un compte ?",
+    "loginSuccess": "Connexion réussie !",
+    "loginError": "Échec de la connexion. Veuillez réessayer.",
+    "invalidEmail": "Veuillez entrer une adresse e-mail valide",
+    "passwordRequired": "Le mot de passe est requis",
+    "emailRequired": "L'e-mail est requis"
+  },
+  "dashboard": {
+    "welcome": "Bon retour !",
+    "subtitle": "Voici ce qui se passe avec vos opérations RH.",
+    "totalEmployees": "Total des employés",
+    "activeProjects": "Projets actifs",
+    "pendingTasks": "Tâches en attente",
+    "completedTasks": "Tâches terminées",
+    "recentActivity": "Activité récente",
+    "quickActions": "Actions rapides",
+    "viewAll": "Voir tout"
+  },
+  "tasks": {
+    "title": "Tâches",
+    "myTasks": "Mes tâches",
+    "allTasks": "Toutes les tâches",
+    "createTask": "Créer une tâche",
+    "taskTitle": "Titre de la tâche",
+    "description": "Description",
+    "priority": "Priorité",
+    "dueDate": "Date d'échéance",
+    "assignedTo": "Assigné à",
+    "status": "Statut",
+    "high": "Élevée",
+    "medium": "Moyenne",
+    "low": "Faible",
+    "todo": "À faire",
+    "inProgress": "En cours",
+    "review": "En révision",
+    "done": "Terminé"
+  },
+  "activities": {
+    "title": "Activités",
+    "recentActivities": "Activités récentes",
+    "noActivities": "Aucune activité récente",
+    "activityType": "Type d'activité",
+    "timestamp": "Horodatage",
+    "user": "Utilisateur",
+    "description": "Description"
+  },
+  "messages": {
+    "title": "Messages",
+    "inbox": "Boîte de réception",
+    "sent": "Envoyés",
+    "compose": "Composer",
+    "newMessage": "Nouveau message",
+    "to": "À",
+    "subject": "Objet",
+    "message": "Message",
+    "send": "Envoyer",
+    "reply": "Répondre",
+    "forward": "Transférer",
+    "markAsRead": "Marquer comme lu",
+    "markAsUnread": "Marquer comme non lu",
+    "deleteMessage": "Supprimer le message"
+  },
+  "calendar": {
+    "title": "Calendrier",
+    "today": "Aujourd'hui",
+    "month": "Mois",
+    "week": "Semaine",
+    "day": "Jour",
+    "agenda": "Agenda",
+    "addEvent": "Ajouter un événement",
+    "eventTitle": "Titre de l'événement",
+    "startDate": "Date de début",
+    "endDate": "Date de fin",
+    "allDay": "Toute la journée",
+    "location": "Lieu",
+    "description": "Description",
+    "saveEvent": "Enregistrer l'événement",
+    "deleteEvent": "Supprimer l'événement"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "profile": "Profil",
+    "account": "Compte",
+    "notifications": "Notifications",
+    "privacy": "Confidentialité",
+    "security": "Sécurité",
+    "language": "Langue",
+    "theme": "Thème",
+    "darkMode": "Mode sombre",
+    "lightMode": "Mode clair",
+    "systemDefault": "Par défaut du système",
+    "saveChanges": "Enregistrer les modifications",
+    "resetToDefault": "Réinitialiser par défaut"
+  },
+  "languages": {
+    "en": "English",
+    "fr": "Français",
+    "rw": "Kinyarwanda"
+  },
+  "landing": {
+    "features": "Fonctionnalités",
+    "pricing": "Tarifs",
+    "reviews": "Avis",
+    "contact": "Contact",
+    "signIn": "Se connecter",
+    "getStarted": "Commencer",
+    "heroTitle": "Simplifiez vos opérations RH avec des solutions alimentées par l'IA",
+    "heroSubtitle": "Automatisez le recrutement, gérez la paie, suivez les performances et assurez la conformité avec notre plateforme de gestion RH complète.",
+    "startFreeTrial": "Essai gratuit",
+    "watchDemo": "Voir la démo",
+    "tryHRProTitle": "Essayez HR Pro Aujourd'hui",
+    "tryHRProSubtitle": "Découvrez la puissance de la gestion RH alimentée par l'IA. Accédez à notre démo avec différents rôles utilisateur pour voir comment HR Pro transforme votre lieu de travail.",
+    "featuresTitle": "Tout ce dont vous avez besoin pour gérer votre main-d'œuvre",
+    "featuresSubtitle": "Outils puissants conçus pour rationaliser vos processus RH et stimuler la productivité dans votre organisation.",
+    "feature1": {
+      "title": "Gestion des employés",
+      "description": "Profils d'employés complets, intégration et gestion du cycle de vie avec recherche et filtrage avancés."
+    },
+    "feature2": {
+      "title": "Suivi des performances",
+      "description": "Définissez des objectifs, suivez les progrès et effectuez des évaluations de performance avec des rappels automatisés et des analyses."
+    },
+    "feature3": {
+      "title": "Conformité et sécurité",
+      "description": "Assurez la conformité réglementaire avec des rapports automatisés, des pistes d'audit et une gestion sécurisée des données."
+    },
+    "feature4": {
+      "title": "Temps et présence",
+      "description": "Suivez les heures de travail, gérez les horaires et traitez les demandes de congés avec une automatisation intelligente."
+    },
+    "feature5": {
+      "title": "Analyses et rapports",
+      "description": "Obtenez des insights sur les tendances de la main-d'œuvre, les métriques de productivité et les analyses de performance avec des tableaux de bord personnalisables."
+    },
+    "feature6": {
+      "title": "Insights alimentés par l'IA",
+      "description": "Tirez parti de l'intelligence artificielle pour les analyses prédictives, les recommandations de talents et les flux de travail automatisés."
+    },
+    "testimonialsTitle": "Approuvé par les professionnels RH du monde entier",
+    "testimonialsSubtitle": "Découvrez ce que nos clients disent d'HR Pro",
+    "testimonial1": {
+      "content": "HR Pro a transformé notre façon de gérer notre main-d'œuvre. Les fonctionnalités d'automatisation nous font gagner des heures chaque semaine."
+    },
+    "testimonial2": {
+      "content": "Les capacités d'analyse et de reporting nous donnent des insights que nous n'avions jamais eus auparavant. Très recommandé !"
+    },
+    "testimonial3": {
+      "content": "L'implémentation s'est déroulée en douceur et l'équipe de support est exceptionnelle. Nos processus RH sont maintenant 10x plus efficaces."
+    },
+    "ctaTitle": "Prêt à transformer vos opérations RH ?",
+    "ctaSubtitle": "Rejoignez des milliers d'entreprises qui utilisent déjà HR Pro pour rationaliser leur gestion de la main-d'œuvre.",
+    "contactUs": "Nous contacter",
+    "footerDescription": "Plateforme moderne de gestion RH conçue pour rationaliser les opérations de main-d'œuvre et stimuler la productivité.",
+    "footerProduct": "Produit",
+    "footerCompany": "Entreprise",
+    "about": "À propos",
+    "privacy": "Confidentialité",
+    "allRightsReserved": "Tous droits réservés.",
+    "pricingTitle": "Tarification simple et transparente",
+    "pricingSubtitle": "Choisissez le plan qui correspond aux besoins de votre organisation",
+    "freeTrial": "Essai gratuit",
+    "perMonth": "par mois",
+    "perYear": "par an",
+    "startFreeTrial": "Commencer l'essai gratuit",
+    "contactSales": "Contacter les ventes",
+    "mostPopular": "Le plus populaire",
+    "basicPlan": {
+      "name": "Basique",
+      "price": "29",
+      "description": "Parfait pour les petites équipes qui débutent",
+      "features": [
+        "Jusqu'à 50 employés",
+        "Gestion basique des employés",
+        "Suivi du temps",
+        "Rapports de base",
+        "Support par email"
+      ]
+    },
+    "professionalPlan": {
+      "name": "Professionnel",
+      "price": "79",
+      "description": "Idéal pour les organisations en croissance",
+      "features": [
+        "Jusqu'à 200 employés",
+        "Gestion avancée des employés",
+        "Suivi des performances",
+        "Analyses avancées",
+        "Support prioritaire",
+        "Intégrations personnalisées"
+      ]
+    },
+    "enterprisePlan": {
+      "name": "Entreprise",
+      "price": "199",
+      "description": "Pour les grandes organisations avec des besoins complexes",
+      "features": [
+        "Employés illimités",
+        "Suite RH complète",
+        "Aperçus alimentés par l'IA",
+        "Flux de travail personnalisés",
+        "Support dédié",
+        "Sécurité avancée",
+        "Options de marque blanche"
+      ]
+    },
+    "whyChooseUs": "Pourquoi choisir HR Pro ?",
+    "whyChooseSubtitle": "Découvrez ce qui fait de nous la solution de gestion RH leader",
+    "reason1": {
+      "title": "Automatisation alimentée par l'IA",
+      "description": "Tirez parti de l'intelligence artificielle pour automatiser les tâches répétitives et obtenir des aperçus prédictifs"
+    },
+    "reason2": {
+      "title": "Sécurité d'entreprise",
+      "description": "Sécurité de niveau bancaire avec conformité SOC 2 et chiffrement de bout en bout"
+    },
+    "reason3": {
+      "title": "Support 24/7",
+      "description": "Support 24h/24 et 7j/7 de notre équipe d'experts pour assurer votre succès"
+    },
+    "reason4": {
+      "title": "Intégration facile",
+      "description": "Intégrez-vous parfaitement à vos outils et flux de travail existants"
+    },
+    "demoAccessTitle": "Explorez notre plateforme",
+    "demoAccessSubtitle": "Découvrez la puissance de HR Pro avec nos démos interactives",
+    "adminDemo": "Tableau de bord administrateur",
+    "employeeDemo": "Portail employé",
+    "hrDemo": "Gestion RH",
+    "managerDemo": "Outils de gestionnaire",
+    "trainerDemo": "Plateforme de formation",
+    "auditorDemo": "Audit et conformité",
+    "roleCards": {
+      "administrator": {
+        "title": "Administrateur",
+        "description": "Contrôle complet du système, gestion des employés et analyses complètes.",
+        "button": "Accéder à la démo Admin →"
+      },
+      "employee": {
+        "title": "Employé",
+        "description": "Portail libre-service, suivi du temps, gestion des congés et tableau de bord personnel.",
+        "button": "Accéder à la démo Employé →"
+      },
+      "hrManager": {
+        "title": "Gestionnaire RH",
+        "description": "Recrutement, gestion des performances, conformité et analyses de la main-d'œuvre.",
+        "button": "Accéder à la démo RH →"
+      },
+      "manager": {
+        "title": "Gestionnaire",
+        "description": "Gestion d'équipe, évaluations de performance, suivi de projet et allocation des ressources.",
+        "button": "Accéder à la démo Gestionnaire →"
+      },
+      "trainer": {
+        "title": "Formateur",
+        "description": "Gestion des cours, parcours d'apprentissage, évaluations et analyses de formation.",
+        "button": "Accéder à la démo Formateur →"
+      },
+      "auditor": {
+        "title": "Auditeur",
+        "description": "Surveillance de la conformité, pistes d'audit, évaluation des risques et rapports réglementaires.",
+        "button": "Accéder à la démo Auditeur →"
+      }
+    },
+    "contactInfo": {
+      "email": "echhosolutions@yahoo.com",
+      "phone": "+250 793373953",
+      "address": "Kigali, Rwanda",
+      "businessHours": "Lun-Ven: 8h00 - 18h00 CAT"
+    }
+  }
+}

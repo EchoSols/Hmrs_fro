@@ -1,0 +1,350 @@
+{
+  "common": {
+    "loading": "Kurangira...",
+    "error": "Ikibazo",
+    "success": "Intsinzi",
+    "cancel": "Kureka",
+    "save": "Bika",
+    "delete": "Siba",
+    "edit": "Hindura",
+    "add": "Ongera",
+    "search": "Shakisha",
+    "filter": "Shungura",
+    "sort": "Shungura",
+    "refresh": "Ongera ubushya",
+    "back": "Subira inyuma",
+    "next": "Ikurikira",
+    "previous": "Ibanza",
+    "close": "Funga",
+    "open": "Fungura",
+    "yes": "Yego",
+    "no": "Oya",
+    "confirm": "Emeza",
+    "actions": "Ibikorwa",
+    "status": "Imiterere",
+    "active": "Gikora",
+    "inactive": "Ntigikora",
+    "pending": "Bitaratangira",
+    "completed": "Byarangiye",
+    "overdue": "Byarangiye igihe"
+  },
+  "navigation": {
+    "menu": "Ibikubiyemo",
+    "dashboard": "Ikibaho",
+    "overview": "Inyandiko y'ibanze",
+    "myTasks": "Ibikorwa byanjye",
+    "activities": "Ibikorwa",
+    "messages": "Ubutumwa",
+    "teamMembers": "Abanyamuryango b'itsinda",
+    "calendar": "Kalendari",
+    "recentProjects": "Ibikorwa byo vuba",
+    "insideAppDesign": "Gushushanya App yo mu rugo",
+    "salesatticsCrmDesign": "Gushushanya CRM Salesattics",
+    "internalProjects": "Ibikorwa byo mu rugo"
+  },
+  "teamMembers": {
+    "title": "Abanyamuryango b'itsinda",
+    "addTeamMember": "Ongera umunyamuryango w'itsinda",
+    "searchPlaceholder": "Shakisha",
+    "name": "Izina",
+    "emailAddress": "Aderesi ya email",
+    "teams": "Amatsinda",
+    "status": "Imiterere",
+    "offline": "Ntibikora",
+    "selectAll": "Hitamo byose",
+    "noMembersFound": "Nta munyamuryango w'itsinda wabonetse",
+    "memberAdded": "Umunyamuryango w'itsinda yongewe neza",
+    "memberUpdated": "Umunyamuryango w'itsinda wahindutse neza",
+    "memberDeleted": "Umunyamuryango w'itsinda wasibwe neza"
+  },
+  "header": {
+    "searchPlaceholder": "Ushakisha iki?",
+    "themeToggle": "Hindura ibara",
+    "userProfile": "Inyandiko y'umukoresha"
+  },
+  "sidebar": {
+    "companyName": "Product Co.",
+    "brandName": "dash"
+  },
+  "auth": {
+    "login": "Kwinjira",
+    "logout": "Sohoka",
+    "signIn": "Injira",
+    "signUp": "Iyandikishe",
+    "email": "Email",
+    "password": "Ijambo banga",
+    "confirmPassword": "Emeza ijambo banga",
+    "forgotPassword": "Wibagiwe ijambo banga?",
+    "rememberMe": "Ntibibagirwe",
+    "dontHaveAccount": "Niba ufite konti?",
+    "alreadyHaveAccount": "Ufite konti?",
+    "loginSuccess": "Kwinjira byagenze neza!",
+    "loginError": "Kwinjira byanze. Ongera ugerageze.",
+    "invalidEmail": "Andika email yemewe",
+    "passwordRequired": "Ijambo banga akenewe",
+    "emailRequired": "Email akenewe"
+  },
+  "dashboard": {
+    "welcome": "Uraza neza!",
+    "subtitle": "Dore ibikorwa by'ubuyobozi bw'abakozi.",
+    "totalEmployees": "Abakozi bose",
+    "activeProjects": "Ibikorwa bikora",
+    "pendingTasks": "Ibikorwa bitarangira",
+    "completedTasks": "Ibikorwa byarangiye",
+    "recentActivity": "Ibikorwa byo vuba",
+    "quickActions": "Ibikorwa byihuse",
+    "viewAll": "Reba byose"
+  },
+  "tasks": {
+    "title": "Ibikorwa",
+    "myTasks": "Ibikorwa byanjye",
+    "allTasks": "Ibikorwa byose",
+    "createTask": "Kora igikorwa",
+    "taskTitle": "Umutekano w'igikorwa",
+    "description": "Ibisobanura",
+    "priority": "Ibanza",
+    "dueDate": "Itariki yo kurangira",
+    "assignedTo": "Byatanzwe kuri",
+    "status": "Imiterere",
+    "high": "Hejuru",
+    "medium": "Hagati",
+    "low": "Hasi",
+    "todo": "Bikwiye gukorwa",
+    "inProgress": "Bikora",
+    "review": "Birebwa",
+    "done": "Byarangiye"
+  },
+  "activities": {
+    "title": "Ibikorwa",
+    "recentActivities": "Ibikorwa byo vuba",
+    "noActivities": "Nta bikorwa byo vuba",
+    "activityType": "Ubwoko bw'igikorwa",
+    "timestamp": "Igihe",
+    "user": "Umukoresha",
+    "description": "Ibisobanura"
+  },
+  "messages": {
+    "title": "Ubutumwa",
+    "inbox": "Akazu ko kwakira",
+    "sent": "Byoherejwe",
+    "compose": "Andika",
+    "newMessage": "Ubutumwa bushya",
+    "to": "Kuri",
+    "subject": "Icyo",
+    "message": "Ubutumwa",
+    "send": "Ohereza",
+    "reply": "Subiza",
+    "forward": "Ohereza inyuma",
+    "markAsRead": "Shirako nk'ubusoma",
+    "markAsUnread": "Shirako nk'ubutabona",
+    "deleteMessage": "Siba ubutumwa"
+  },
+  "calendar": {
+    "title": "Kalendari",
+    "today": "Uyu munsi",
+    "month": "Ukwezi",
+    "week": "Icyumweru",
+    "day": "Umunsi",
+    "agenda": "Ibikorwa",
+    "addEvent": "Ongera igikorwa",
+    "eventTitle": "Umutekano w'igikorwa",
+    "startDate": "Itariki yo gutangira",
+    "endDate": "Itariki yo kurangira",
+    "allDay": "Umunsi wose",
+    "location": "Aho",
+    "description": "Ibisobanura",
+    "saveEvent": "Bika igikorwa",
+    "deleteEvent": "Siba igikorwa"
+  },
+  "settings": {
+    "title": "Igenamiterere",
+    "profile": "Inyandiko",
+    "account": "Konti",
+    "notifications": "Kumenyesha",
+    "privacy": "Ibanga",
+    "security": "Umutekano",
+    "language": "Ururimi",
+    "theme": "Ibara",
+    "darkMode": "Ibara ry'ijoro",
+    "lightMode": "Ibara ry'umutaga",
+    "systemDefault": "Ibikenewe kuri sisitemu",
+    "saveChanges": "Bika impinduka",
+    "resetToDefault": "Subira kuri ibikenewe"
+  },
+  "languages": {
+    "en": "English",
+    "fr": "Français",
+    "rw": "Kinyarwanda"
+  },
+  "landing": {
+    "features": "Ibikoresho",
+    "pricing": "Amadolari",
+    "reviews": "Ibisubizo",
+    "contact": "Twandikire",
+    "signIn": "Injira",
+    "getStarted": "Tangira",
+    "heroTitle": "Koroshya ibikorwa byawe by'umukozi ukoresheje ibisubizo by'ubwenge",
+    "heroSubtitle": "Koroshya ubwishingizi, gucunga amashuri, kurikirana ibikorwa, kandi wizigire ko ufata amabwiriza ukoresheje urubuga rwacu rwuzuye rwo gucunga umukozi.",
+    "startFreeTrial": "Tangira kugenzura kubuntu",
+    "watchDemo": "Reba demo",
+    "tryHRProTitle": "Gerageza HR Pro Uyu Munsi",
+    "tryHRProSubtitle": "Menya ingufu zo gucunga umukozi z'ubwenge. Shobora demo yacu ukoresheje amabwiriza atandukanye yo kumenya uko HR Pro ihindura aho ukora.",
+    "featuresTitle": "Ibintu byose ukeneye kugucunga abakozi bawe",
+    "featuresSubtitle": "Ibikoresho by'ingufu byateguwe kugira ngo koroshye ibikorwa byawe by'umukozi kandi byongere ubworozi mu ishyirahamwe ryawe.",
+    "feature1": {
+      "title": "Gucunga umukozi",
+      "description": "Amakuru yuzuye y'umukozi, kwongeramo, kandi gucunga ubuzima burambye hamwe n'ubushakashatsi bw'inyongera na filitari."
+    },
+    "feature2": {
+      "title": "Kurikirana ibikorwa",
+      "description": "Shyiraho intego, kurikirane inyigisho, kandi ukore ibisuzumira by'ibikorwa hamwe n'ibibutso by'ubwenge kandi analytics."
+    },
+    "feature3": {
+      "title": "Kujya kumurongo n'umutekano",
+      "description": "Wizigire ko ufata amabwiriza y'ubutegetsi ukoresheje raporo z'ubwenge, inzira z'ubushakashatsi, kandi gucunga amakuru y'umutekano."
+    },
+    "feature4": {
+      "title": "Igihe n'ubwiyongere",
+      "description": "Kurikirane amasaha y'akazi, gucunga amatangazo, kandi gucunga ibisabwe by'uburenganzira ukoresheje ubwenge."
+    },
+    "feature5": {
+      "title": "Analytics n'iraporo",
+      "description": "Shobora kumenya ibikorwa by'umukozi, metriko z'ubworozi, kandi analytics y'ibikorwa ukoresheje dashboard zihindurwa."
+    },
+    "feature6": {
+      "title": "Ubumenyi bw'ubwenge",
+      "description": "Koresha ubwenge bw'ubwenge kugira ngo ubone analytics y'ibizaza, inama z'ubuhanga, kandi ibikorwa by'ubwenge."
+    },
+    "testimonialsTitle": "Byizigirwa n'abakora umukozi ku isi yose",
+    "testimonialsSubtitle": "Reba ibyo abakiriya bacu bavuga kuri HR Pro",
+    "testimonial1": {
+      "content": "HR Pro yahindutse uko dukora umukozi. Ibikoresho by'ubwenge bidufasha gufata amasaha buri cyumweru."
+    },
+    "testimonial2": {
+      "content": "Ubushobozi bwo gusuzuma n'iraporo biduha ubumenyi twatige tubura. Byakomeye!"
+    },
+    "testimonial3": {
+      "content": "Gushyira mu bikorwa byari byoroshye kandi ishyirahamwe ryo gufasha ni rya nyuma. Ibikorwa byacu by'umukozi ubu ni 10x byoroshye."
+    },
+    "ctaTitle": "Uteguye guhindura ibikorwa byawe by'umukozi?",
+    "ctaSubtitle": "Shyiramo amashyirahamwe y'amagana yatangiye gukoresha HR Pro kugira ngo koroshye gucunga abakozi bawo.",
+    "contactUs": "Twandikire",
+    "footerDescription": "Urubuga rw'ubu rwo gucunga umukozi rwateguwe kugira ngo koroshye ibikorwa by'umukozi kandi byongere ubworozi.",
+    "footerProduct": "Ibicuruzwa",
+    "footerCompany": "Ishyirahamwe",
+    "about": "Ibyerekeye",
+    "privacy": "Ibanga",
+    "allRightsReserved": "Amabwiriza yose yarangiwe.",
+    "pricingTitle": "Amadolari yoroshye kandi y'umutekano",
+    "pricingSubtitle": "Hitamo gahunda ihagije kugira ngo ihagije ibikenewe by'ishyirahamwe ryawe",
+    "freeTrial": "Kugenzura kubuntu",
+    "perMonth": "ku kwezi",
+    "perYear": "ku mwaka",
+    "startFreeTrial": "Tangira kugenzura kubuntu",
+    "contactSales": "Twandikire abohereza",
+    "mostPopular": "Byakomeye",
+    "basicPlan": {
+      "name": "Ibikenewe",
+      "price": "29",
+      "description": "Byihuse kugira ngo amatsinda mato batangire",
+      "features": [
+        "Kugeza kuri abakozi 50",
+        "Gucunga umukozi ibikenewe",
+        "Kurikirana igihe",
+        "Iraporo ibikenewe",
+        "Gufasha email"
+      ]
+    },
+    "professionalPlan": {
+      "name": "Umwuga",
+      "price": "79",
+      "description": "Byihuse kugira ngo ishyirahamwe rikura",
+      "features": [
+        "Kugeza kuri abakozi 200",
+        "Gucunga umukozi inyongera",
+        "Kurikirana ibikorwa",
+        "Analytics inyongera",
+        "Gufasha ibikenewe",
+        "Guhuzwa ibikenewe"
+      ]
+    },
+    "enterprisePlan": {
+      "name": "Ishyirahamwe",
+      "price": "199",
+      "description": "Kugira ngo ishyirahamwe rinini rufite ibikenewe by'inyongera",
+      "features": [
+        "Abakozi benshi",
+        "Suite y'umukozi yuzuye",
+        "Ubumenyi bw'ubwenge",
+        "Ibikorwa ibikenewe",
+        "Gufasha byihuse",
+        "Umutekano inyongera",
+        "Ibikoresho by'ibara"
+      ]
+    },
+    "whyChooseUs": "Kuki dutora HR Pro?",
+    "whyChooseSubtitle": "Menya ibintu bidufasha kuba icyo gisubizo cyo gucunga umukozi",
+    "reason1": {
+      "title": "Ubwenge bw'ubwenge",
+      "description": "Koresha ubwenge bw'ubwenge kugira ngo koroshye ibikorwa by'inyongera kandi ubone ubumenyi bw'ibizaza"
+    },
+    "reason2": {
+      "title": "Umutekano w'ishyirahamwe",
+      "description": "Umutekano w'ubwoko bw'ububiko hamwe n'ubujya kumurongo SOC 2 kandi kwibanga byose"
+    },
+    "reason3": {
+      "title": "Gufasha 24/7",
+      "description": "Gufasha 24h/24 kandi 7j/7 kuva ku ishyirahamwe ryawe rya nyuma kugira ngo wizigire intsinzi"
+    },
+    "reason4": {
+      "title": "Guhuzwa byoroshye",
+      "description": "Shyiramo neza mu bikoresho byawe byo vuba kandi ibikorwa by'umukozi"
+    },
+    "demoAccessTitle": "Shakisha urubuga rwacu",
+    "demoAccessSubtitle": "Menya ingufu za HR Pro ukoresheje demo zacu z'inyongera",
+    "adminDemo": "Ikibaho cy'umuyobozi",
+    "employeeDemo": "Urubuga rw'umukozi",
+    "hrDemo": "Gucunga umukozi",
+    "managerDemo": "Ibikoresho by'umuyobozi",
+    "trainerDemo": "Urubuga rwo kwigisha",
+    "auditorDemo": "Gusuzuma n'ubujya kumurongo",
+    "roleCards": {
+      "administrator": {
+        "title": "Umyobozi",
+        "description": "Gucunga sisitemu yose, gucunga umukozi, kandi analytics yuzuye.",
+        "button": "Shobora Demo y'Umyobozi →"
+      },
+      "employee": {
+        "title": "Umukozi",
+        "description": "Urubuga rwo kwifashisha, kurikirana igihe, gucunga uburenganzira, kandi ikibaho cyawe.",
+        "button": "Shobora Demo y'Umukozi →"
+      },
+      "hrManager": {
+        "title": "Umyobozi w'Umukozi",
+        "description": "Ubwishingizi, gucunga ibikorwa, kujya kumurongo, kandi analytics y'umukozi.",
+        "button": "Shobora Demo y'Umukozi →"
+      },
+      "manager": {
+        "title": "Umyobozi",
+        "description": "Gucunga itsinda, gusuzuma ibikorwa, kurikirana ibikorwa, kandi gutanga ibikoresho.",
+        "button": "Shobora Demo y'Umyobozi →"
+      },
+      "trainer": {
+        "title": "Umwigisha",
+        "description": "Gucunga amasomo, inzira zo kwiga, gusuzuma, kandi analytics y'uburezi.",
+        "button": "Shobora Demo y'Umwigisha →"
+      },
+      "auditor": {
+        "title": "Umusuzi",
+        "description": "Kurikirana kujya kumurongo, inzira z'ubushakashatsi, gusuzuma ibibazo, kandi raporo y'amabwiriza.",
+        "button": "Shobora Demo y'Umusuzi →"
+      }
+    },
+    "contactInfo": {
+      "email": "echhosolutions@yahoo.com",
+      "phone": "+250 793373953",
+      "address": "Kigali, Rwanda",
+      "businessHours": "Kuwa Mbere-Kuwa Gatanu: 8:00 - 18:00 CAT"
+    }
+  }
+}
