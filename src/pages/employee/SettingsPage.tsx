@@ -1,10 +1,56 @@
-import React, { useState } from 'react'
-import { Settings, User, Bell, Shield, Globe, Palette, Save, Eye, EyeOff } from 'lucide-react'
+import React, { useState } from 'react';
+import { Settings, User, Bell, Shield, Palette, Save, Eye, EyeOff } from 'lucide-react';
+
+// Define the shape of your settings object for better type safety
+interface SettingsState {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  jobTitle: string;
+  department: string;
+  manager: string;
+  bio: string;
+  timezone: string;
+  workingHours: {
+    start: string;
+    end: string;
+  };
+  emailNotifications: {
+    messages: boolean;
+    mentions: boolean;
+    taskAssignments: boolean;
+    meetings: boolean;
+    announcements: boolean;
+    newsletters: boolean;
+  };
+  pushNotifications: {
+    messages: boolean;
+    mentions: boolean;
+    taskAssignments: boolean;
+    meetings: boolean;
+  };
+  notificationFrequency: string;
+  profileVisibility: string;
+  showEmail: boolean;
+  showPhone: boolean;
+  showBirthday: boolean;
+  allowDirectMessages: boolean;
+  theme: string;
+  language: string;
+  dateFormat: string;
+  timeFormat: string;
+  // FIXED: Explicitly set these types to 'string' to resolve the type error.
+  currentPassword: string;
+  newPassword: string;
+  confirmPassword: string;
+  twoFactorEnabled: boolean;
+}
 
 const SettingsPage = () => {
-  const [activeTab, setActiveTab] = useState('profile')
-  const [showPassword, setShowPassword] = useState(false)
-  const [settings, setSettings] = useState({
+  const [activeTab, setActiveTab] = useState('profile');
+  const [showPassword, setShowPassword] = useState(false);
+  const [settings, setSettings] = useState<SettingsState>({
     // Profile Settings
     firstName: 'John',
     lastName: 'Doe',
@@ -19,7 +65,6 @@ const SettingsPage = () => {
       start: '09:00',
       end: '17:00'
     },
-    
     // Notification Settings
     emailNotifications: {
       messages: true,
@@ -36,42 +81,52 @@ const SettingsPage = () => {
       meetings: true
     },
     notificationFrequency: 'immediate',
-    
     // Privacy Settings
     profileVisibility: 'company',
     showEmail: true,
     showPhone: false,
     showBirthday: true,
     allowDirectMessages: true,
-    
     // Appearance Settings
     theme: 'light',
     language: 'en',
     dateFormat: 'MM/DD/YYYY',
     timeFormat: '12h',
-    
     // Account Settings
     currentPassword: '',
     newPassword: '',
     confirmPassword: '',
     twoFactorEnabled: false
-  })
+  });
 
-  const handleInputChange = (section: string, field: string, value: any) => {
-    setSettings(prev => ({
-      ...prev,
-      [section]: {
-        ...prev[section as keyof typeof prev],
-        [field]: value
+  // FIXED: The `handleInputChange` function is now more type-safe and robust.
+  const handleInputChange = (section: keyof SettingsState, field: string, value: any) => {
+    setSettings(prevSettings => {
+      const sectionValue = prevSettings[section];
+
+      // Check if the section value is an object before spreading it.
+      if (typeof sectionValue === 'object' && sectionValue !== null) {
+        return {
+          ...prevSettings,
+          [section]: {
+            ...sectionValue as object, // Type assertion to satisfy the spread operator
+            [field]: value,
+          },
+        };
+      } else {
+        return {
+          ...prevSettings,
+          [section]: value,
+        };
       }
-    }))
-  }
+    });
+  };
 
   const handleSaveSettings = () => {
     // Save settings logic here
-    console.log('Saving settings:', settings)
-    alert('Settings saved successfully!')
-  }
+    console.log('Saving settings:', settings);
+    alert('Settings saved successfully!');
+  };
 
   const timezones = [
     'America/New_York',
@@ -82,7 +137,7 @@ const SettingsPage = () => {
     'Europe/Paris',
     'Asia/Tokyo',
     'Asia/Shanghai'
-  ]
+  ];
 
   const languages = [
     { code: 'en', name: 'English' },
@@ -91,7 +146,7 @@ const SettingsPage = () => {
     { code: 'de', name: 'German' },
     { code: 'ja', name: 'Japanese' },
     { code: 'zh', name: 'Chinese' }
-  ]
+  ];
 
   return (
     <div className="p-6">
@@ -151,7 +206,7 @@ const SettingsPage = () => {
                         <input
                           type="text"
                           value={settings.firstName}
-                          onChange={(e) => setSettings({...settings, firstName: e.target.value})}
+                          onChange={(e) => setSettings({ ...settings, firstName: e.target.value })}
                           className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                         />
                       </div>
@@ -160,7 +215,7 @@ const SettingsPage = () => {
                         <input
                           type="text"
                           value={settings.lastName}
-                          onChange={(e) => setSettings({...settings, lastName: e.target.value})}
+                          onChange={(e) => setSettings({ ...settings, lastName: e.target.value })}
                           className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                         />
                       </div>
@@ -169,7 +224,7 @@ const SettingsPage = () => {
                         <input
                           type="email"
                           value={settings.email}
-                          onChange={(e) => setSettings({...settings, email: e.target.value})}
+                          onChange={(e) => setSettings({ ...settings, email: e.target.value })}
                           className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                         />
                       </div>
@@ -178,7 +233,7 @@ const SettingsPage = () => {
                         <input
                           type="tel"
                           value={settings.phone}
-                          onChange={(e) => setSettings({...settings, phone: e.target.value})}
+                          onChange={(e) => setSettings({ ...settings, phone: e.target.value })}
                           className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                         />
                       </div>
@@ -206,7 +261,7 @@ const SettingsPage = () => {
                       <textarea
                         rows={3}
                         value={settings.bio}
-                        onChange={(e) => setSettings({...settings, bio: e.target.value})}
+                        onChange={(e) => setSettings({ ...settings, bio: e.target.value })}
                         className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                         placeholder="Tell us about yourself..."
                       />
@@ -220,7 +275,7 @@ const SettingsPage = () => {
                         <label className="block text-sm font-medium text-gray-700 mb-1">Timezone</label>
                         <select
                           value={settings.timezone}
-                          onChange={(e) => setSettings({...settings, timezone: e.target.value})}
+                          onChange={(e) => setSettings({ ...settings, timezone: e.target.value })}
                           className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                         >
                           {timezones.map((tz) => (
@@ -263,7 +318,7 @@ const SettingsPage = () => {
                           </label>
                           <input
                             type="checkbox"
-                            checked={value as boolean}
+                            checked={value}
                             onChange={(e) => handleInputChange('emailNotifications', key, e.target.checked)}
                             className="rounded border-gray-300 text-primary-600 focus:ring-primary-500"
                           />
@@ -282,7 +337,7 @@ const SettingsPage = () => {
                           </label>
                           <input
                             type="checkbox"
-                            checked={value as boolean}
+                            checked={value}
                             onChange={(e) => handleInputChange('pushNotifications', key, e.target.checked)}
                             className="rounded border-gray-300 text-primary-600 focus:ring-primary-500"
                           />
@@ -295,7 +350,7 @@ const SettingsPage = () => {
                     <h3 className="text-md font-semibold text-gray-900 mb-4">Notification Frequency</h3>
                     <select
                       value={settings.notificationFrequency}
-                      onChange={(e) => setSettings({...settings, notificationFrequency: e.target.value})}
+                      onChange={(e) => setSettings({ ...settings, notificationFrequency: e.target.value })}
                       className="w-full max-w-xs p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     >
                       <option value="immediate">Immediate</option>
@@ -313,7 +368,7 @@ const SettingsPage = () => {
                     <h2 className="text-lg font-semibold text-gray-900 mb-4">Profile Visibility</h2>
                     <select
                       value={settings.profileVisibility}
-                      onChange={(e) => setSettings({...settings, profileVisibility: e.target.value})}
+                      onChange={(e) => setSettings({ ...settings, profileVisibility: e.target.value })}
                       className="w-full max-w-xs p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     >
                       <option value="public">Public (Everyone)</option>
@@ -331,7 +386,7 @@ const SettingsPage = () => {
                         <input
                           type="checkbox"
                           checked={settings.showEmail}
-                          onChange={(e) => setSettings({...settings, showEmail: e.target.checked})}
+                          onChange={(e) => setSettings({ ...settings, showEmail: e.target.checked })}
                           className="rounded border-gray-300 text-primary-600 focus:ring-primary-500"
                         />
                       </div>
@@ -340,7 +395,7 @@ const SettingsPage = () => {
                         <input
                           type="checkbox"
                           checked={settings.showPhone}
-                          onChange={(e) => setSettings({...settings, showPhone: e.target.checked})}
+                          onChange={(e) => setSettings({ ...settings, showPhone: e.target.checked })}
                           className="rounded border-gray-300 text-primary-600 focus:ring-primary-500"
                         />
                       </div>
@@ -349,7 +404,7 @@ const SettingsPage = () => {
                         <input
                           type="checkbox"
                           checked={settings.showBirthday}
-                          onChange={(e) => setSettings({...settings, showBirthday: e.target.checked})}
+                          onChange={(e) => setSettings({ ...settings, showBirthday: e.target.checked })}
                           className="rounded border-gray-300 text-primary-600 focus:ring-primary-500"
                         />
                       </div>
@@ -363,7 +418,7 @@ const SettingsPage = () => {
                       <input
                         type="checkbox"
                         checked={settings.allowDirectMessages}
-                        onChange={(e) => setSettings({...settings, allowDirectMessages: e.target.checked})}
+                        onChange={(e) => setSettings({ ...settings, allowDirectMessages: e.target.checked })}
                         className="rounded border-gray-300 text-primary-600 focus:ring-primary-500"
                       />
                     </div>
@@ -379,7 +434,7 @@ const SettingsPage = () => {
                       {['light', 'dark', 'auto'].map((theme) => (
                         <button
                           key={theme}
-                          onClick={() => setSettings({...settings, theme})}
+                          onClick={() => setSettings({ ...settings, theme })}
                           className={`p-3 border rounded-lg text-center capitalize transition-colors ${
                             settings.theme === theme
                               ? 'border-primary-500 bg-primary-50 text-primary-700'
@@ -399,7 +454,7 @@ const SettingsPage = () => {
                         <label className="block text-sm font-medium text-gray-700 mb-1">Language</label>
                         <select
                           value={settings.language}
-                          onChange={(e) => setSettings({...settings, language: e.target.value})}
+                          onChange={(e) => setSettings({ ...settings, language: e.target.value })}
                           className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                         >
                           {languages.map((lang) => (
@@ -411,7 +466,7 @@ const SettingsPage = () => {
                         <label className="block text-sm font-medium text-gray-700 mb-1">Date Format</label>
                         <select
                           value={settings.dateFormat}
-                          onChange={(e) => setSettings({...settings, dateFormat: e.target.value})}
+                          onChange={(e) => setSettings({ ...settings, dateFormat: e.target.value })}
                           className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                         >
                           <option value="MM/DD/YYYY">MM/DD/YYYY</option>
@@ -423,7 +478,7 @@ const SettingsPage = () => {
                         <label className="block text-sm font-medium text-gray-700 mb-1">Time Format</label>
                         <select
                           value={settings.timeFormat}
-                          onChange={(e) => setSettings({...settings, timeFormat: e.target.value})}
+                          onChange={(e) => setSettings({ ...settings, timeFormat: e.target.value })}
                           className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                         >
                           <option value="12h">12 Hour</option>
@@ -446,7 +501,7 @@ const SettingsPage = () => {
                           <input
                             type={showPassword ? 'text' : 'password'}
                             value={settings.currentPassword}
-                            onChange={(e) => setSettings({...settings, currentPassword: e.target.value})}
+                            onChange={(e) => setSettings({ ...settings, currentPassword: e.target.value })}
                             className="w-full p-2 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                           />
                           <button
@@ -463,7 +518,7 @@ const SettingsPage = () => {
                         <input
                           type="password"
                           value={settings.newPassword}
-                          onChange={(e) => setSettings({...settings, newPassword: e.target.value})}
+                          onChange={(e) => setSettings({ ...settings, newPassword: e.target.value })}
                           className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                         />
                       </div>
@@ -472,7 +527,7 @@ const SettingsPage = () => {
                         <input
                           type="password"
                           value={settings.confirmPassword}
-                          onChange={(e) => setSettings({...settings, confirmPassword: e.target.value})}
+                          onChange={(e) => setSettings({ ...settings, confirmPassword: e.target.value })}
                           className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                         />
                       </div>
@@ -492,7 +547,7 @@ const SettingsPage = () => {
                       <input
                         type="checkbox"
                         checked={settings.twoFactorEnabled}
-                        onChange={(e) => setSettings({...settings, twoFactorEnabled: e.target.checked})}
+                        onChange={(e) => setSettings({ ...settings, twoFactorEnabled: e.target.checked })}
                         className="rounded border-gray-300 text-primary-600 focus:ring-primary-500"
                       />
                     </div>
@@ -516,7 +571,7 @@ const SettingsPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SettingsPage
+export default SettingsPage;

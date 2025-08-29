@@ -122,7 +122,7 @@ const TaxReportsPage = () => {
     pendingReports: taxReports.filter(r => r.status === 'pending').length,
     overdueReports: taxReports.filter(r => r.status === 'overdue').length,
     totalTaxes: taxReports.reduce((sum, r) => sum + r.totalTaxes, 0),
-    averageTaxPerEmployee: taxReports.reduce((sum, r) => sum + r.totalTaxes, 0) / taxReports.reduce((sum, r) => sum + r.employeeCount, 0) * taxReports.length
+    averageTaxPerEmployee: taxReports.reduce((sum, r) => sum + r.totalTaxes, 0) / taxReports.reduce((sum, r) => sum + r.employeeCount, 0)
   }
 
   return (
@@ -380,8 +380,8 @@ const TaxReportsPage = () => {
                       }`}>
                         {new Date(report.dueDate) < new Date() && report.status !== 'completed' 
                           ? 'Overdue' 
-                          : `${Math.ceil((new Date(report.dueDate) - new Date()) / (1000 * 60 * 60 * 24))} days remaining`
-                        }
+                          : `${Math.ceil((new Date(report.dueDate).getTime()- new Date().getTime()) / (1000 * 60 * 60 * 24))} days remaining`
+                        }x
                       </div>
                     </td>
                     <td className="px-6 py-4">

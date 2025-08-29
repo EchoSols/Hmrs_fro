@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Search, Filter, Download, Eye, BarChart3, Users, Clock, Award, TrendingUp, TrendingDown, CheckCircle, XCircle, AlertCircle } from 'lucide-react'
+import { Search, Filter, Download, Eye, BarChart3, Users, Clock, Award, TrendingUp, TrendingDown, CheckCircle, XCircle, AlertCircle,X } from 'lucide-react'
 
 interface QuizResult {
   id: string

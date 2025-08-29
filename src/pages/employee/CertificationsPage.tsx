@@ -335,7 +335,9 @@ const CertificationsPage = () => {
                       </div>
                     </div>
                     {cert.verified && (
-                      <CheckCircle className="w-5 h-5 text-green-600" title="Verified" />
+                     <span title="Verified">
+                      <CheckCircle className="w-5 h-5 text-green-600" />
+                     </span>
                     )}
                   </div>
 

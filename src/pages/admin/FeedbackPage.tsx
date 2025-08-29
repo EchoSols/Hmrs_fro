@@ -1,13 +1,63 @@
-import React, { useState } from 'react'
-import { MessageSquare, Users, Star, TrendingUp, Calendar, CheckCircle, AlertCircle, Eye, Edit, Plus, Search, Filter } from 'lucide-react'
+import React, { useState } from 'react';
+import { MessageSquare, Users, Star, TrendingUp, Calendar, CheckCircle, AlertCircle, Eye, Edit, Plus } from 'lucide-react';
+
+// ---
+// Define types for better safety and readability
+// ---
+
+interface CategoryRatings {
+  technical: number | null;
+  communication: number | null;
+  collaboration: number | null;
+  leadership: number | null;
+  problemSolving: number | null;
+}
+
+interface FeedbackItem {
+  id: number;
+  type: '360_review' | 'peer_feedback' | 'upward_feedback' | 'self_assessment';
+  employeeId: string;
+  employeeName: string;
+  department: string;
+  position: string;
+  reviewPeriod: string;
+  status: 'completed' | 'in_progress' | 'pending' | 'overdue';
+  submissionDate: string | null;
+  feedbackGiver: string;
+  giverRole: 'Manager' | 'Peer' | 'Direct Report';
+  overallRating: number | null;
+  categories: CategoryRatings;
+  strengths: string;
+  improvements: string;
+  goals: string;
+  anonymous: boolean;
+}
+
+interface SurveyItem {
+  id: number;
+  title: string;
+  type: 'engagement' | 'pulse';
+  status: 'active' | 'completed' | 'scheduled';
+  startDate: string;
+  endDate: string;
+  responses: number;
+  totalEmployees: number;
+  averageScore: number;
+  categories: string[];
+}
+
+// ---
+// Component
+// ---
 
 const AdminFeedbackPage = () => {
-  const [typeFilter, setTypeFilter] = useState('all')
-  const [statusFilter, setStatusFilter] = useState('all')
-  const [departmentFilter, setDepartmentFilter] = useState('all')
-  const [view, setView] = useState<'feedback' | 'surveys' | 'analytics'>('feedback')
+  const [typeFilter, setTypeFilter] = useState('all');
+  const [statusFilter, setStatusFilter] = useState('all');
+  const [departmentFilter, setDepartmentFilter] = useState('all');
+  const [view, setView] = useState<'feedback' | 'surveys' | 'analytics'>('feedback');
 
-  const feedbackData = [
+  // Using defined types for data
+  const feedbackData: FeedbackItem[] = [
     {
       id: 1,
       type: '360_review',
@@ -26,12 +76,12 @@ const AdminFeedbackPage = () => {
         communication: 4.0,
         collaboration: 4.3,
         leadership: 3.8,
-        problemSolving: 4.4
+        problemSolving: 4.4,
       },
       strengths: 'Excellent technical skills and reliable delivery',
       improvements: 'Could improve communication with stakeholders',
       goals: 'Focus on leadership development and cross-team collaboration',
-      anonymous: false
+      anonymous: false,
     },
     {
       id: 2,
@@ -51,12 +101,12 @@ const AdminFeedbackPage = () => {
         communication: null,
         collaboration: null,
         leadership: null,
-        problemSolving: null
+        problemSolving: null,
       },
       strengths: '',
       improvements: '',
       goals: '',
-      anonymous: false
+      anonymous: false,
     },
     {
       id: 3,
@@ -76,16 +126,16 @@ const AdminFeedbackPage = () => {
         communication: 4.8,
         collaboration: 4.7,
         leadership: 4.9,
-        problemSolving: 4.5
+        problemSolving: 4.5,
       },
       strengths: 'Great listener, provides clear direction, supports team growth',
       improvements: 'Could delegate more effectively',
       goals: 'Continue developing strategic thinking skills',
-      anonymous: true
-    }
-  ]
+      anonymous: true,
+    },
+  ];
 
-  const surveys = [
+  const surveys: SurveyItem[] = [
     {
       id: 1,
       title: 'Employee Engagement Survey Q1 2024',
@@ -96,7 +146,7 @@ const AdminFeedbackPage = () => {
       responses: 45,
       totalEmployees: 60,
       averageScore: 4.2,
-      categories: ['Work Environment', 'Management', 'Career Development', 'Work-Life Balance']
+      categories: ['Work Environment', 'Management', 'Career Development', 'Work-Life Balance'],
     },
     {
       id: 2,
@@ -108,61 +158,71 @@ const AdminFeedbackPage = () => {
       responses: 52,
       totalEmployees: 60,
       averageScore: 3.8,
-      categories: ['Productivity', 'Communication', 'Technology', 'Wellbeing']
-    }
-  ]
+      categories: ['Productivity', 'Communication', 'Technology', 'Wellbeing'],
+    },
+  ];
 
-  const types = ['all', '360_review', 'peer_feedback', 'upward_feedback', 'self_assessment']
-  const statuses = ['all', 'completed', 'in_progress', 'pending', 'overdue']
-  const departments = ['all', 'Engineering', 'Marketing', 'Sales', 'HR', 'Finance']
+  const types = ['all', '360_review', 'peer_feedback', 'upward_feedback', 'self_assessment'];
+  const statuses = ['all', 'completed', 'in_progress', 'pending', 'overdue'];
+  const departments = ['all', 'Engineering', 'Marketing', 'Sales', 'HR', 'Finance'];
 
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'completed':
-        return 'bg-green-100 text-green-800'
-      case 'in_progress':
-        return 'bg-blue-100 text-blue-800'
-      case 'pending':
-        return 'bg-yellow-100 text-yellow-800'
-      case 'overdue':
-        return 'bg-red-100 text-red-800'
       case 'active':
-        return 'bg-green-100 text-green-800'
+        return 'bg-green-100 text-green-800';
+      case 'in_progress':
+        return 'bg-blue-100 text-blue-800';
+      case 'pending':
+      case 'scheduled':
+        return 'bg-yellow-100 text-yellow-800';
+      case 'overdue':
+        return 'bg-red-100 text-red-800';
       default:
-        return 'bg-gray-100 text-gray-800'
+        return 'bg-gray-100 text-gray-800';
     }
-  }
+  };
 
   const getTypeColor = (type: string) => {
     switch (type) {
       case '360_review':
-        return 'bg-purple-100 text-purple-800'
+        return 'bg-purple-100 text-purple-800';
       case 'peer_feedback':
-        return 'bg-blue-100 text-blue-800'
+        return 'bg-blue-100 text-blue-800';
       case 'upward_feedback':
-        return 'bg-green-100 text-green-800'
+        return 'bg-green-100 text-green-800';
       case 'self_assessment':
-        return 'bg-yellow-100 text-yellow-800'
+        return 'bg-yellow-100 text-yellow-800';
       default:
-        return 'bg-gray-100 text-gray-800'
+        return 'bg-gray-100 text-gray-800';
     }
-  }
+  };
 
-  const filteredFeedback = feedbackData.filter(feedback => {
-    const matchesType = typeFilter === 'all' || feedback.type === typeFilter
-    const matchesStatus = statusFilter === 'all' || feedback.status === statusFilter
-    const matchesDepartment = departmentFilter === 'all' || feedback.department === departmentFilter
-    return matchesType && matchesStatus && matchesDepartment
-  })
+  const filteredFeedback = feedbackData.filter((feedback) => {
+    const matchesType = typeFilter === 'all' || feedback.type === typeFilter;
+    const matchesStatus = statusFilter === 'all' || feedback.status === statusFilter;
+    const matchesDepartment = departmentFilter === 'all' || feedback.department === departmentFilter;
+    return matchesType && matchesStatus && matchesDepartment;
+  });
+
+  // Filter out null values before calculating the average
+  const completedFeedbackWithRatings = feedbackData.filter(
+    (f) => f.status === 'completed' && f.overallRating !== null
+  );
+  
+  const totalRatingSum = completedFeedbackWithRatings.reduce((sum, f) => sum + f.overallRating!, 0);
+  const averageRating = totalRatingSum / completedFeedbackWithRatings.length || 0; // Prevent division by zero
 
   const stats = {
     totalFeedback: feedbackData.length,
-    completedFeedback: feedbackData.filter(f => f.status === 'completed').length,
-    averageRating: feedbackData.filter(f => f.overallRating).reduce((sum, f) => sum + f.overallRating, 0) / feedbackData.filter(f => f.overallRating).length,
-    pendingFeedback: feedbackData.filter(f => f.status === 'pending' || f.status === 'in_progress').length,
-    activeSurveys: surveys.filter(s => s.status === 'active').length,
-    surveyResponseRate: Math.round((surveys.reduce((sum, s) => sum + s.responses, 0) / surveys.reduce((sum, s) => sum + s.totalEmployees, 0)) * 100)
-  }
+    completedFeedback: feedbackData.filter((f) => f.status === 'completed').length,
+    averageRating: averageRating,
+    pendingFeedback: feedbackData.filter((f) => f.status === 'pending' || f.status === 'in_progress').length,
+    activeSurveys: surveys.filter((s) => s.status === 'active').length,
+    surveyResponseRate: Math.round(
+      (surveys.reduce((sum, s) => sum + s.responses, 0) / surveys.reduce((sum, s) => sum + s.totalEmployees, 0)) * 100
+    ),
+  };
 
   return (
     <div className="p-6">
@@ -219,9 +279,7 @@ const AdminFeedbackPage = () => {
                 <div className="text-sm text-gray-600">Completed Feedback</div>
               </div>
             </div>
-            <div className="mt-2 text-sm text-blue-600">
-              {stats.totalFeedback} total submissions
-            </div>
+            <div className="mt-2 text-sm text-blue-600">{stats.totalFeedback} total submissions</div>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-sm border">
             <div className="flex items-center gap-3">
@@ -233,9 +291,7 @@ const AdminFeedbackPage = () => {
                 <div className="text-sm text-gray-600">Pending Feedback</div>
               </div>
             </div>
-            <div className="mt-2 text-sm text-yellow-600">
-              Requires follow-up
-            </div>
+            <div className="mt-2 text-sm text-yellow-600">Requires follow-up</div>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-sm border">
             <div className="flex items-center gap-3">
@@ -243,13 +299,13 @@ const AdminFeedbackPage = () => {
                 <Star className="w-6 h-6 text-green-600" />
               </div>
               <div>
-                <div className="text-2xl font-bold text-gray-900">{stats.averageRating ? stats.averageRating.toFixed(1) : 'N/A'}</div>
+                <div className="text-2xl font-bold text-gray-900">
+                  {stats.averageRating ? stats.averageRating.toFixed(1) : 'N/A'}
+                </div>
                 <div className="text-sm text-gray-600">Average Rating</div>
               </div>
             </div>
-            <div className="mt-2 text-sm text-green-600">
-              Overall feedback score
-            </div>
+            <div className="mt-2 text-sm text-green-600">Overall feedback score</div>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-sm border">
             <div className="flex items-center gap-3">
@@ -261,9 +317,7 @@ const AdminFeedbackPage = () => {
                 <div className="text-sm text-gray-600">Survey Response Rate</div>
               </div>
             </div>
-            <div className="mt-2 text-sm text-purple-600">
-              {stats.activeSurveys} active surveys
-            </div>
+            <div className="mt-2 text-sm text-purple-600">{stats.activeSurveys} active surveys</div>
           </div>
         </div>
 
@@ -316,49 +370,63 @@ const AdminFeedbackPage = () => {
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
                         <h3 className="text-lg font-semibold text-gray-900">{feedback.employeeName}</h3>
-                        <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(feedback.type)}`}>
+                        <span
+                          className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(
+                            feedback.type
+                          )}`}
+                        >
                           {feedback.type.replace('_', ' ').toUpperCase()}
                         </span>
-                        <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(feedback.status)}`}>
+                        <span
+                          className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(
+                            feedback.status
+                          )}`}
+                        >
                           {feedback.status.replace('_', ' ').toUpperCase()}
                         </span>
                         {feedback.anonymous && (
-                          <span className="bg-gray-100 text-gray-800 px-2 py-1 rounded-full text-xs">
-                            Anonymous
-                          </span>
+                          <span className="bg-gray-100 text-gray-800 px-2 py-1 rounded-full text-xs">Anonymous</span>
                         )}
                       </div>
                       <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
-                        <span>{feedback.position} • {feedback.department}</span>
+                        <span>
+                          {feedback.position} • {feedback.department}
+                        </span>
                         <span>Given by: {feedback.feedbackGiver} ({feedback.giverRole})</span>
                         <span>Period: {feedback.reviewPeriod}</span>
                       </div>
                     </div>
                     <div className="flex gap-2">
-                      <button className="p-2 text-gray-400 hover:text-blue-600 transition-colors">
+                      <button className="p-2 text-gray-400 transition-colors hover:text-blue-600">
                         <Eye className="w-4 h-4" />
                       </button>
-                      <button className="p-2 text-gray-400 hover:text-green-600 transition-colors">
+                      <button className="p-2 text-gray-400 transition-colors hover:text-green-600">
                         <Edit className="w-4 h-4" />
                       </button>
                     </div>
                   </div>
 
-                  {feedback.overallRating && (
+                  {feedback.overallRating !== null && (
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-4">
                       <div>
-                        <h4 className="font-medium text-gray-900 mb-3">Overall Rating: {feedback.overallRating}/5</h4>
+                        <h4 className="font-medium text-gray-900 mb-3">
+                          Overall Rating: {feedback.overallRating}/5
+                        </h4>
                         <div className="space-y-2">
                           {Object.entries(feedback.categories).map(([category, rating]) => (
-                            rating && (
+                            rating !== null && (
                               <div key={category} className="flex justify-between items-center">
-                                <span className="text-sm text-gray-600 capitalize">{category.replace(/([A-Z])/g, ' $1').trim()}:</span>
+                                <span className="text-sm text-gray-600 capitalize">
+                                  {category.replace(/([A-Z])/g, ' $1').trim()}:
+                                </span>
                                 <div className="flex items-center gap-2">
                                   <div className="flex">
                                     {[1, 2, 3, 4, 5].map((star) => (
                                       <Star
                                         key={star}
-                                        className={`w-4 h-4 ${star <= rating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
+                                        className={`w-4 h-4 ${
+                                          star <= rating ? 'text-yellow-400 fill-current' : 'text-gray-300'
+                                        }`}
                                       />
                                     ))}
                                   </div>
@@ -396,17 +464,19 @@ const AdminFeedbackPage = () => {
                     </div>
                   )}
 
-                  <div className="border-t pt-4">
+                  <div className="pt-4 border-t">
                     <div className="flex justify-between items-center">
                       <div className="text-sm text-gray-500">
-                        {feedback.submissionDate ? `Submitted: ${new Date(feedback.submissionDate).toLocaleDateString()}` : 'Not submitted yet'}
+                        {feedback.submissionDate
+                          ? `Submitted: ${new Date(feedback.submissionDate).toLocaleDateString()}`
+                          : 'Not submitted yet'}
                       </div>
                       <div className="flex gap-2">
-                        <button className="text-sm bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 transition-colors">
+                        <button className="px-3 py-1 text-sm text-white transition-colors rounded bg-blue-600 hover:bg-blue-700">
                           View Details
                         </button>
                         {feedback.status === 'pending' && (
-                          <button className="text-sm bg-yellow-600 text-white px-3 py-1 rounded hover:bg-yellow-700 transition-colors">
+                          <button className="px-3 py-1 text-sm text-white transition-colors rounded bg-yellow-600 hover:bg-yellow-700">
                             Send Reminder
                           </button>
                         )}
@@ -426,19 +496,26 @@ const AdminFeedbackPage = () => {
                 <div className="flex justify-between items-start mb-4">
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">{survey.title}</h3>
-                    <div className="flex items-center gap-4 text-sm text-gray-500 mt-2">
-                      <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(survey.status)}`}>
+                    <div className="flex items-center gap-4 mt-2 text-sm text-gray-500">
+                      <span
+                        className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(
+                          survey.status
+                        )}`}
+                      >
                         {survey.status.toUpperCase()}
                       </span>
                       <span>Type: {survey.type}</span>
-                      <span>{new Date(survey.startDate).toLocaleDateString()} - {new Date(survey.endDate).toLocaleDateString()}</span>
+                      <span>
+                        {new Date(survey.startDate).toLocaleDateString()} -{' '}
+                        {new Date(survey.endDate).toLocaleDateString()}
+                      </span>
                     </div>
                   </div>
                   <div className="flex gap-2">
-                    <button className="p-2 text-gray-400 hover:text-blue-600 transition-colors">
+                    <button className="p-2 text-gray-400 transition-colors hover:text-blue-600">
                       <Eye className="w-4 h-4" />
                     </button>
-                    <button className="p-2 text-gray-400 hover:text-green-600 transition-colors">
+                    <button className="p-2 text-gray-400 transition-colors hover:text-green-600">
                       <Edit className="w-4 h-4" />
                     </button>
                   </div>
@@ -447,8 +524,12 @@ const AdminFeedbackPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                   <div>
                     <div className="text-sm text-gray-600">Response Rate</div>
-                    <div className="font-semibold text-gray-900">{survey.responses}/{survey.totalEmployees}</div>
-                    <div className="text-sm text-gray-500">{Math.round((survey.responses / survey.totalEmployees) * 100)}%</div>
+                    <div className="font-semibold text-gray-900">
+                      {survey.responses}/{survey.totalEmployees}
+                    </div>
+                    <div className="text-sm text-gray-500">
+                      {Math.round((survey.responses / survey.totalEmployees) * 100)}%
+                    </div>
                   </div>
                   <div>
                     <div className="text-sm text-gray-600">Average Score</div>
@@ -460,22 +541,22 @@ const AdminFeedbackPage = () => {
                   </div>
                 </div>
 
-                <div className="border-t pt-4">
+                <div className="pt-4 border-t">
                   <div className="flex justify-between items-center">
                     <div className="w-full mr-4">
                       <div className="flex justify-between text-sm mb-1">
                         <span>Progress</span>
                         <span>{Math.round((survey.responses / survey.totalEmployees) * 100)}%</span>
                       </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div 
-                          className="bg-blue-500 h-2 rounded-full"
+                      <div className="w-full h-2 rounded-full bg-gray-200">
+                        <div
+                          className="h-2 rounded-full bg-blue-500"
                           style={{ width: `${(survey.responses / survey.totalEmployees) * 100}%` }}
                         ></div>
                       </div>
                     </div>
                     <div className="flex gap-2">
-                      <button className="text-sm bg-primary-600 text-white px-3 py-1 rounded hover:bg-primary-700 transition-colors">
+                      <button className="px-3 py-1 text-sm text-white transition-colors rounded bg-primary-600 hover:bg-primary-700">
                         View Results
                       </button>
                     </div>
@@ -493,7 +574,9 @@ const AdminFeedbackPage = () => {
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600">Completion Rate:</span>
-                  <span className="font-semibold text-gray-900">{Math.round((stats.completedFeedback / stats.totalFeedback) * 100)}%</span>
+                  <span className="font-semibold text-gray-900">
+                    {stats.totalFeedback > 0 ? Math.round((stats.completedFeedback / stats.totalFeedback) * 100) : 0}%
+                  </span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600">Average Response Time:</span>
@@ -510,13 +593,13 @@ const AdminFeedbackPage = () => {
               <h2 className="text-lg font-semibold text-gray-900 mb-4">Department Participation</h2>
               <div className="space-y-3">
                 {departments.slice(1).map((dept) => {
-                  const deptFeedback = feedbackData.filter(f => f.department === dept).length
+                  const deptFeedback = feedbackData.filter((f) => f.department === dept).length;
                   return (
                     <div key={dept} className="flex justify-between items-center">
                       <span className="text-gray-600">{dept}:</span>
                       <span className="font-semibold text-gray-900">{deptFeedback} submissions</span>
                     </div>
-                  )
+                  );
                 })}
               </div>
             </div>
@@ -524,7 +607,7 @@ const AdminFeedbackPage = () => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AdminFeedbackPage
+export default AdminFeedbackPage;

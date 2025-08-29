@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Users, Search, Filter, Eye, Edit, MessageCircle, Calendar, Download, Star, MapPin, Briefcase, GraduationCap, Phone, Mail, ExternalLink } from 'lucide-react'
+import  { useState } from 'react'
+import { Users, Search,Eye, MessageCircle, Calendar, Download, Star, MapPin, Briefcase, GraduationCap, Phone, Mail, ExternalLink } from 'lucide-react'
 
 const CandidatesPage = () => {
   const [searchTerm, setSearchTerm] = useState('')

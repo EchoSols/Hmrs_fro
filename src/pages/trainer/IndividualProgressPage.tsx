@@ -15,7 +15,8 @@ import {
   Calendar,
   BookOpen,
   Award,
-  Activity
+  Activity,
+  X
 } from 'lucide-react'
 
 interface LearnerProgress {

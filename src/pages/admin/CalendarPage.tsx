@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Calendar, Clock, Users, Plus, ChevronLeft, ChevronRight } from 'lucide-react'
+import { Plus, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const AdminCalendarPage = () => {
   const [currentDate, setCurrentDate] = useState(new Date())

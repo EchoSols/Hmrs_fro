@@ -35,7 +35,7 @@ interface PersonalDevelopmentPlan {
     id: string
     title: string
     description: string
-    category: 'Skill Development' | 'Career Growth' | 'Leadership' | 'Technical' | 'Soft Skills'
+    category: 'Skill Development' | 'Leadership' | 'Career Growth' | 'Technical' | 'Soft Skills' | 'Certification' | 'Training' | 'Mentoring' | 'Project'
     targetDate: string
     status: 'Not Started' | 'In Progress' | 'Completed' | 'Delayed'
     progress: number

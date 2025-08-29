@@ -250,7 +250,7 @@ const BenefitsPage = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">401(k) Retirement</h3>
-                    <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs ${getStatusColor(currentBenefits.retirement.status || 'active')}`}>
+                    <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs ${getStatusColor('active')}`}>
                       <CheckCircle className="w-3 h-3 mr-1" />
                       active
                     </span>
